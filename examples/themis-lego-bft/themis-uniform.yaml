@@ -1,5 +1,5 @@
-protocolName: themis
-protocolConnectorPath: ./connectors/themis.js
+protocolName: themis-lego-bft
+protocolConnectorPath: ./connectors/themis-lego-bft.js
 experiments:
   - name: 4rep # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -24,6 +24,7 @@ experiments:
       replySize: 1
       batchReplies: true
       requestTimeout: 40000
+      max_parallel_requests_per_client: 1_000
       batchTimeout:
         secs: 0
         nano: 10_000_000
@@ -32,7 +33,7 @@ experiments:
       clients: 4
       startTime: 2 s
       payload: 256
-      concurrent: 1000
+      concurrent: 1_000
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 50rep # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -57,6 +58,7 @@ experiments:
       replySize: 1
       batchReplies: true
       requestTimeout: 40000
+      max_parallel_requests_per_client: 1_000
       batchTimeout:
         secs: 0
         nano: 10_000_000
@@ -65,5 +67,5 @@ experiments:
       clients: 50
       startTime: 2 s
       payload: 256
-      concurrent: 1000
+      concurrent: 1_000
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)

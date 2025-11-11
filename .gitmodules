@@ -22,3 +22,9 @@
 	branch = bullshark
 
 
+[submodule "themis-lego-bft"]
+	path = themis-lego-bft
+	url = git@gitlab.cs.fau.de:i4/projects/themis-protocols/themis-lego-bft.git
+[submodule "themis-v2"]
+	path = themis-v2
+	url = git@gitlab.cs.fau.de:i4/projects/themis-protocols/themis-v2.git
