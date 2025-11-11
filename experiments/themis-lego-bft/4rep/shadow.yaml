@@ -1,0 +1,54 @@
+general:
+  stop_time: 10 s
+  data_directory: /home/raphael/Documents/tool/experiments/themis-lego-bft/4rep
+  parallelism: 20
+experimental:
+  use_legacy_working_dir: true
+  runahead: 630 us
+network:
+  graph:
+    type: gml
+    file:
+      path: network.gml
+  use_shortest_path: false
+hosts:
+  themisReplica0:
+    ip_addr: 11.50.60.75
+    network_node_id: 0
+    processes:
+      - path: >-
+          /home/raphael/Documents/tool/themis-lego-bft/target/debug/themis-bench-app
+        environment: RUST_LOG=info
+        args: 0 --config config/delphi
+  themisReplica1:
+    ip_addr: 11.225.37.243
+    network_node_id: 1
+    processes:
+      - path: >-
+          /home/raphael/Documents/tool/themis-lego-bft/target/debug/themis-bench-app
+        environment: RUST_LOG=info
+        args: 1 --config config/delphi
+  themisReplica2:
+    ip_addr: 11.40.209.122
+    network_node_id: 2
+    processes:
+      - path: >-
+          /home/raphael/Documents/tool/themis-lego-bft/target/debug/themis-bench-app
+        environment: RUST_LOG=info
+        args: 2 --config config/delphi
+  themisReplica3:
+    ip_addr: 11.164.240.98
+    network_node_id: 3
+    processes:
+      - path: >-
+          /home/raphael/Documents/tool/themis-lego-bft/target/debug/themis-bench-app
+        environment: RUST_LOG=info
+        args: 3 --config config/delphi
+  themisClient0:
+    ip_addr: 11.56.51.31
+    network_node_id: 4
+    processes:
+      - path: /home/raphael/Documents/tool/themis-lego-bft/target/debug/bench-client
+        environment: RUST_LOG=info
+        args: '-d 8 --config config/delphi --payload 256 -c 4 --concurrent 1000'
+        start_time: 2 s

@@ -1,0 +1,41 @@
+2000-01-01T00:00:00.000000Z  INFO themis_bench_app: STARTING REPLICA 0    
+2000-01-01T00:00:00.000000Z  INFO themis_bench_app: Logging: INFO    
+2000-01-01T00:00:00.000000Z  INFO themis_bench_app: selected runtime Single    
+2000-01-01T00:00:00.000000Z  INFO themis_pbft: PBFTConfig {
+    num_peers: 4,
+    faults: 1,
+    checkpoint_interval: 1200,
+    high_mark_delta: 3200,
+    request_timeout: 40000,
+    keep_checkpoints: 2,
+    request_proposals: false,
+    primary_forwarding: Full,
+    backup_forwarding: Full,
+    reply_mode: All,
+    debug_delay_proposal_us: 0,
+    debug_force_vc: ForceVc {
+        in_view: 0,
+        at_seq: 0,
+    },
+}
+2000-01-01T00:00:00.000000Z  INFO themis_bench_app: setup modules    
+2000-01-01T00:00:00.000000Z  INFO themis_core::net::tcp::endpoint: binding ("11.49.106.215", 10003)
+2000-01-01T00:00:00.000000Z  INFO themis_core::net::tcp::endpoint: binding ("11.49.106.215", 10002)
+2000-01-01T00:00:00.000000Z  INFO themis_core::modules: batching=true
+2000-01-01T00:00:00.000000Z  INFO themis_core::modules: BatchConfig {
+    min: 400,
+    max: 400,
+    timeout: Some(
+        10ms,
+    ),
+    rel_timeout: None,
+}
+2000-01-01T00:00:00.003000Z  INFO themis_core::net::tcp::group: Connected 1 from 11.35.180.151:62240
+2000-01-01T00:00:00.003000Z  INFO themis_core::net::tcp::group: Connected 2 from 11.48.68.87:37005
+2000-01-01T00:00:00.003000Z  INFO themis_core::net::tcp::group: Connected 3 from 11.65.189.144:44120
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 100 from 11.196.111.190:13527
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 101 from 11.196.111.190:39521
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 102 from 11.196.111.190:48120
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 103 from 11.196.111.190:34852
+2000-01-01T00:00:05.702000Z  WARN themis_pbft: checkpoint at 1200 stable. Last commit: 1200
+2000-01-01T00:00:09.398000Z  WARN themis_pbft: checkpoint at 2400 stable. Last commit: 2400

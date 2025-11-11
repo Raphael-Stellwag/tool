@@ -1,0 +1,128 @@
+[2m2000-01-01T00:00:00.000000Z[0m [32m INFO[0m [2mthemis_pbft[0m[2m:[0m PBFTConfig {
+    num_peers: 50,
+    faults: 16,
+    checkpoint_interval: 1200,
+    high_mark_delta: 3200,
+    request_timeout: 40000,
+    keep_checkpoints: 2,
+    request_proposals: false,
+    primary_forwarding: Full,
+    backup_forwarding: Full,
+    reply_mode: All,
+    debug_delay_proposal_us: 0,
+    debug_force_vc: ForceVc {
+        in_view: 0,
+        at_seq: 0,
+    },
+}
+[2m2000-01-01T00:00:00.000000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::endpoint[0m[2m:[0m binding ("0.0.0.0", 10003)
+[2m2000-01-01T00:00:00.000000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::endpoint[0m[2m:[0m binding ("0.0.0.0", 10002)
+[2m2000-01-01T00:00:00.000000Z[0m [32m INFO[0m [2mthemis_core::modules[0m[2m:[0m batching=true
+[2m2000-01-01T00:00:00.000000Z[0m [32m INFO[0m [2mthemis_core::modules[0m[2m:[0m BatchConfig {
+    min: 400,
+    max: 400,
+    timeout: Some(
+        100ms,
+    ),
+    rel_timeout: None,
+}
+[2m2000-01-01T00:00:00.000000Z[0m [32m INFO[0m [2mthemis_core::authentication::proposal_verifier[0m[2m:[0m ProposalVerifier started
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 12 from 11.124.147.210:52778
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 13 from 11.101.120.55:39545
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 14 from 11.172.237.111:63114
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 15 from 11.245.207.127:11949
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 16 from 11.12.45.29:38313
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 17 from 11.64.91.72:42292
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 18 from 11.225.41.46:44752
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 19 from 11.36.172.93:46112
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 20 from 11.31.92.231:55422
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 21 from 11.136.113.226:61106
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 22 from 11.122.147.9:27414
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 23 from 11.108.116.132:64181
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 24 from 11.53.86.109:32670
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 25 from 11.119.23.184:52171
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 26 from 11.183.10.223:41701
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 27 from 11.198.86.182:55675
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 28 from 11.198.244.55:54738
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 29 from 11.23.151.244:15973
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 30 from 11.181.235.173:21306
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 31 from 11.246.66.42:28267
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 32 from 11.232.9.155:62572
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 33 from 11.129.5.85:29231
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 34 from 11.104.40.244:27950
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 35 from 11.254.147.109:15353
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 36 from 11.55.164.11:53046
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 37 from 11.74.164.242:27324
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 38 from 11.189.32.139:65274
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 39 from 11.154.149.158:18827
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 40 from 11.176.108.77:50196
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 41 from 11.90.109.182:19997
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 42 from 11.6.103.57:18905
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 43 from 11.57.222.40:29215
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 44 from 11.14.151.54:53262
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 45 from 11.112.182.95:56102
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 46 from 11.243.11.208:26367
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 47 from 11.237.152.245:41121
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 48 from 11.88.190.186:52626
+[2m2000-01-01T00:00:00.003000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 49 from 11.80.183.49:26159
+[2m2000-01-01T00:00:00.004000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 0 from 11.141.195.12:10003
+[2m2000-01-01T00:00:00.004000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 1 from 11.241.10.170:10003
+[2m2000-01-01T00:00:00.004000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 10 from 11.62.59.207:10003
+[2m2000-01-01T00:00:00.004000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 2 from 11.203.233.201:10003
+[2m2000-01-01T00:00:00.004000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 3 from 11.33.93.124:10003
+[2m2000-01-01T00:00:00.004000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 4 from 11.119.125.10:10003
+[2m2000-01-01T00:00:00.004000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 5 from 11.155.37.243:10003
+[2m2000-01-01T00:00:00.004000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 6 from 11.84.157.134:10003
+[2m2000-01-01T00:00:00.004000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 7 from 11.21.109.188:10003
+[2m2000-01-01T00:00:00.004000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 8 from 11.207.236.247:10003
+[2m2000-01-01T00:00:00.004000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 9 from 11.74.133.43:10003
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 100 from 11.241.69.162:51789
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 101 from 11.241.69.162:27641
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 102 from 11.241.69.162:16995
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 103 from 11.241.69.162:10377
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 104 from 11.241.69.162:47406
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 105 from 11.241.69.162:14373
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 106 from 11.241.69.162:24810
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 107 from 11.241.69.162:19014
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 108 from 11.241.69.162:61895
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 109 from 11.241.69.162:61272
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 110 from 11.241.69.162:39942
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 111 from 11.241.69.162:52798
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 112 from 11.241.69.162:31717
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 113 from 11.241.69.162:26327
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 114 from 11.241.69.162:25503
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 115 from 11.241.69.162:29349
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 116 from 11.241.69.162:51710
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 117 from 11.241.69.162:64423
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 118 from 11.241.69.162:59435
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 119 from 11.241.69.162:50051
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 120 from 11.241.69.162:24508
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 121 from 11.241.69.162:31960
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 122 from 11.241.69.162:61211
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 123 from 11.241.69.162:58150
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 124 from 11.241.69.162:36047
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 125 from 11.241.69.162:10365
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 126 from 11.241.69.162:30125
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 127 from 11.241.69.162:46329
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 128 from 11.241.69.162:43010
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 129 from 11.241.69.162:19241
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 130 from 11.241.69.162:40550
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 131 from 11.241.69.162:53175
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 132 from 11.241.69.162:24925
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 133 from 11.241.69.162:59032
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 134 from 11.241.69.162:64993
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 135 from 11.241.69.162:29045
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 136 from 11.241.69.162:12376
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 137 from 11.241.69.162:65271
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 138 from 11.241.69.162:36280
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 139 from 11.241.69.162:18792
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 140 from 11.241.69.162:55479
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 141 from 11.241.69.162:62208
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 142 from 11.241.69.162:14935
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 143 from 11.241.69.162:19314
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 144 from 11.241.69.162:39071
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 145 from 11.241.69.162:29077
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 146 from 11.241.69.162:13308
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 147 from 11.241.69.162:65474
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 148 from 11.241.69.162:56724
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 149 from 11.241.69.162:19829

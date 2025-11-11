@@ -1,0 +1,50 @@
+general:
+  stop_time: 10 s
+  data_directory: /home/raphael/Documents/tool/experiments/myThemisExperiments/4rep
+  parallelism: 20
+experimental:
+  use_legacy_working_dir: true
+  runahead: 630 us
+network:
+  graph:
+    type: gml
+    file:
+      path: network.gml
+  use_shortest_path: false
+hosts:
+  themisReplica0:
+    ip_addr: 11.49.106.215
+    network_node_id: 0
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 0 --config config/default
+  themisReplica1:
+    ip_addr: 11.35.180.151
+    network_node_id: 1
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 1 --config config/default
+  themisReplica2:
+    ip_addr: 11.48.68.87
+    network_node_id: 2
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 2 --config config/default
+  themisReplica3:
+    ip_addr: 11.65.189.144
+    network_node_id: 3
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 3 --config config/default
+  themisClient0:
+    ip_addr: 11.196.111.190
+    network_node_id: 4
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/bench-client
+        environment: RUST_LOG=INFO
+        args: '-d 8 --config config/default --payload 256 -c 4 --concurrent 1000'
+        start_time: 2 s

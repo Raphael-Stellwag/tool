@@ -1,0 +1,38 @@
+[2m2000-01-01T00:00:00.000000Z[0m [32m INFO[0m [2mthemis_pbft[0m[2m:[0m PBFTConfig {
+    num_peers: 4,
+    faults: 1,
+    checkpoint_interval: 1200,
+    high_mark_delta: 3200,
+    request_timeout: 40000,
+    keep_checkpoints: 2,
+    request_proposals: false,
+    primary_forwarding: Full,
+    backup_forwarding: Full,
+    reply_mode: All,
+    debug_delay_proposal_us: 0,
+    debug_force_vc: ForceVc {
+        in_view: 0,
+        at_seq: 0,
+    },
+}
+[2m2000-01-01T00:00:00.000000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::endpoint[0m[2m:[0m binding ("0.0.0.0", 10003)
+[2m2000-01-01T00:00:00.000000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::endpoint[0m[2m:[0m binding ("0.0.0.0", 10002)
+[2m2000-01-01T00:00:00.000000Z[0m [32m INFO[0m [2mthemis_core::modules[0m[2m:[0m batching=true
+[2m2000-01-01T00:00:00.000000Z[0m [32m INFO[0m [2mthemis_core::modules[0m[2m:[0m BatchConfig {
+    min: 400,
+    max: 400,
+    timeout: Some(
+        100ms,
+    ),
+    rel_timeout: None,
+}
+[2m2000-01-01T00:00:00.000000Z[0m [32m INFO[0m [2mthemis_core::authentication::proposal_verifier[0m[2m:[0m ProposalVerifier started
+[2m2000-01-01T00:00:00.004000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 0 from 11.221.183.65:10003
+[2m2000-01-01T00:00:00.004000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 1 from 11.35.169.121:10003
+[2m2000-01-01T00:00:00.004000Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 2 from 11.221.108.64:10003
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 100 from 11.90.67.5:23418
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 101 from 11.90.67.5:19617
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 102 from 11.90.67.5:34774
+[2m2000-01-01T00:00:02.003500Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 103 from 11.90.67.5:31640
+[2m2000-01-01T00:00:05.705000Z[0m [33m WARN[0m [2mthemis_pbft[0m[2m:[0m checkpoint at 1200 stable. Last commit: 1200
+[2m2000-01-01T00:00:09.404000Z[0m [33m WARN[0m [2mthemis_pbft[0m[2m:[0m checkpoint at 2400 stable. Last commit: 2400

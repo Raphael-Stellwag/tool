@@ -1,0 +1,919 @@
+---
+general:
+  stop_time: 10 sec
+  seed: 1
+  parallelism: 20
+  bootstrap_end_time: 0 sec
+  log_level: info
+  heartbeat_interval: 1 sec
+  data_directory: /home/raphael/Documents/tool/experiments/themis-v2/50rep
+  template_directory: ~
+  progress: false
+  model_unblocked_syscall_latency: false
+network:
+  graph:
+    type: gml
+    file:
+      path: network.gml
+      compression: ~
+  use_shortest_path: false
+experimental:
+  use_sched_fifo: false
+  use_explicit_block_message: false
+  use_seccomp: true
+  use_syscall_counters: true
+  use_object_counters: true
+  use_preload_libc: true
+  use_preload_openssl_rng: true
+  use_preload_openssl_crypto: false
+  preload_spin_max: 0
+  use_memory_manager: false
+  use_shim_syscall_handler: true
+  use_cpu_pinning: true
+  runahead: 630 μs
+  use_dynamic_runahead: false
+  scheduler_policy: host
+  socket_send_buffer: 131072 B
+  socket_send_autotune: true
+  socket_recv_buffer: 174760 B
+  socket_recv_autotune: true
+  interface_buffer: 1024000 B
+  interface_qdisc: fifo
+  worker_threads: ~
+  use_legacy_working_dir: true
+  host_heartbeat_log_level: info
+  host_heartbeat_log_info:
+    - node
+  host_heartbeat_interval: ~
+  strace_logging_mode: "off"
+  max_unapplied_cpu_latency: 1 μs
+  unblocked_syscall_latency: 1 μs
+  unblocked_vdso_latency: 10 ns
+hosts:
+  themisClient0:
+    network_node_id: 50
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/bench-client
+        args: "-d 8 --config config/default --payload 256 -c 50 --concurrent 1000"
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 2 sec
+        stop_time: ~
+    ip_addr: 11.241.69.162
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica0:
+    network_node_id: 0
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 0 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.141.195.12
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica1:
+    network_node_id: 1
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 1 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.241.10.170
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica10:
+    network_node_id: 10
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 10 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.62.59.207
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica11:
+    network_node_id: 11
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 11 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.213.224.62
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica12:
+    network_node_id: 12
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 12 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.124.147.210
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica13:
+    network_node_id: 13
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 13 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.101.120.55
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica14:
+    network_node_id: 14
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 14 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.172.237.111
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica15:
+    network_node_id: 15
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 15 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.245.207.127
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica16:
+    network_node_id: 16
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 16 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.12.45.29
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica17:
+    network_node_id: 17
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 17 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.64.91.72
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica18:
+    network_node_id: 18
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 18 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.225.41.46
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica19:
+    network_node_id: 19
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 19 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.36.172.93
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica2:
+    network_node_id: 2
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 2 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.203.233.201
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica20:
+    network_node_id: 20
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 20 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.31.92.231
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica21:
+    network_node_id: 21
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 21 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.136.113.226
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica22:
+    network_node_id: 22
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 22 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.122.147.9
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica23:
+    network_node_id: 23
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 23 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.108.116.132
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica24:
+    network_node_id: 24
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 24 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.53.86.109
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica25:
+    network_node_id: 25
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 25 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.119.23.184
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica26:
+    network_node_id: 26
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 26 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.183.10.223
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica27:
+    network_node_id: 27
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 27 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.198.86.182
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica28:
+    network_node_id: 28
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 28 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.198.244.55
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica29:
+    network_node_id: 29
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 29 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.23.151.244
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica3:
+    network_node_id: 3
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 3 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.33.93.124
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica30:
+    network_node_id: 30
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 30 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.181.235.173
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica31:
+    network_node_id: 31
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 31 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.246.66.42
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica32:
+    network_node_id: 32
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 32 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.232.9.155
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica33:
+    network_node_id: 33
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 33 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.129.5.85
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica34:
+    network_node_id: 34
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 34 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.104.40.244
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica35:
+    network_node_id: 35
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 35 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.254.147.109
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica36:
+    network_node_id: 36
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 36 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.55.164.11
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica37:
+    network_node_id: 37
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 37 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.74.164.242
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica38:
+    network_node_id: 38
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 38 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.189.32.139
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica39:
+    network_node_id: 39
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 39 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.154.149.158
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica4:
+    network_node_id: 4
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 4 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.119.125.10
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica40:
+    network_node_id: 40
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 40 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.176.108.77
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica41:
+    network_node_id: 41
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 41 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.90.109.182
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica42:
+    network_node_id: 42
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 42 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.6.103.57
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica43:
+    network_node_id: 43
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 43 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.57.222.40
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica44:
+    network_node_id: 44
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 44 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.14.151.54
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica45:
+    network_node_id: 45
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 45 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.112.182.95
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica46:
+    network_node_id: 46
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 46 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.243.11.208
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica47:
+    network_node_id: 47
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 47 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.237.152.245
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica48:
+    network_node_id: 48
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 48 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.88.190.186
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica49:
+    network_node_id: 49
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 49 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.80.183.49
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica5:
+    network_node_id: 5
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 5 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.155.37.243
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica6:
+    network_node_id: 6
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 6 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.84.157.134
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica7:
+    network_node_id: 7
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 7 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.21.109.188
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica8:
+    network_node_id: 8
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 8 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.207.236.247
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B
+  themisReplica9:
+    network_node_id: 9
+    processes:
+      - path: /home/raphael/Documents/tool/themis-v2/target/debug/themis-bench-app
+        args: 9 --config config/default
+        environment: RUST_LOG=INFO
+        quantity: 1
+        start_time: 0 sec
+        stop_time: ~
+    ip_addr: 11.74.133.43
+    quantity: 1
+    bandwidth_down: ~
+    bandwidth_up: ~
+    options:
+      log_level: ~
+      pcap_directory: ~
+      pcap_capture_size: 65535 B

@@ -1,0 +1,372 @@
+general:
+  stop_time: 10 s
+  data_directory: /home/raphael/Documents/tool/experiments/myThemisExperiments/50rep
+  parallelism: 20
+experimental:
+  use_legacy_working_dir: true
+  runahead: 630 us
+network:
+  graph:
+    type: gml
+    file:
+      path: network.gml
+  use_shortest_path: false
+hosts:
+  themisReplica0:
+    ip_addr: 11.42.161.205
+    network_node_id: 0
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 0 --config config/default
+  themisReplica1:
+    ip_addr: 11.172.47.20
+    network_node_id: 1
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 1 --config config/default
+  themisReplica2:
+    ip_addr: 11.153.143.156
+    network_node_id: 2
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 2 --config config/default
+  themisReplica3:
+    ip_addr: 11.60.101.67
+    network_node_id: 3
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 3 --config config/default
+  themisReplica4:
+    ip_addr: 11.189.187.191
+    network_node_id: 4
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 4 --config config/default
+  themisReplica5:
+    ip_addr: 11.199.114.92
+    network_node_id: 5
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 5 --config config/default
+  themisReplica6:
+    ip_addr: 11.15.55.38
+    network_node_id: 6
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 6 --config config/default
+  themisReplica7:
+    ip_addr: 11.29.225.159
+    network_node_id: 7
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 7 --config config/default
+  themisReplica8:
+    ip_addr: 11.204.14.22
+    network_node_id: 8
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 8 --config config/default
+  themisReplica9:
+    ip_addr: 11.230.168.29
+    network_node_id: 9
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 9 --config config/default
+  themisReplica10:
+    ip_addr: 11.131.138.35
+    network_node_id: 10
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 10 --config config/default
+  themisReplica11:
+    ip_addr: 11.20.123.11
+    network_node_id: 11
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 11 --config config/default
+  themisReplica12:
+    ip_addr: 11.135.58.101
+    network_node_id: 12
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 12 --config config/default
+  themisReplica13:
+    ip_addr: 11.168.187.189
+    network_node_id: 13
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 13 --config config/default
+  themisReplica14:
+    ip_addr: 11.114.124.160
+    network_node_id: 14
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 14 --config config/default
+  themisReplica15:
+    ip_addr: 11.148.130.253
+    network_node_id: 15
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 15 --config config/default
+  themisReplica16:
+    ip_addr: 11.185.9.43
+    network_node_id: 16
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 16 --config config/default
+  themisReplica17:
+    ip_addr: 11.68.35.206
+    network_node_id: 17
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 17 --config config/default
+  themisReplica18:
+    ip_addr: 11.95.212.110
+    network_node_id: 18
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 18 --config config/default
+  themisReplica19:
+    ip_addr: 11.108.249.117
+    network_node_id: 19
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 19 --config config/default
+  themisReplica20:
+    ip_addr: 11.15.31.53
+    network_node_id: 20
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 20 --config config/default
+  themisReplica21:
+    ip_addr: 11.134.210.12
+    network_node_id: 21
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 21 --config config/default
+  themisReplica22:
+    ip_addr: 11.181.240.113
+    network_node_id: 22
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 22 --config config/default
+  themisReplica23:
+    ip_addr: 11.37.38.96
+    network_node_id: 23
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 23 --config config/default
+  themisReplica24:
+    ip_addr: 11.157.165.112
+    network_node_id: 24
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 24 --config config/default
+  themisReplica25:
+    ip_addr: 11.221.10.202
+    network_node_id: 25
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 25 --config config/default
+  themisReplica26:
+    ip_addr: 11.198.103.247
+    network_node_id: 26
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 26 --config config/default
+  themisReplica27:
+    ip_addr: 11.111.115.16
+    network_node_id: 27
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 27 --config config/default
+  themisReplica28:
+    ip_addr: 11.47.235.204
+    network_node_id: 28
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 28 --config config/default
+  themisReplica29:
+    ip_addr: 11.117.189.49
+    network_node_id: 29
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 29 --config config/default
+  themisReplica30:
+    ip_addr: 11.142.113.175
+    network_node_id: 30
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 30 --config config/default
+  themisReplica31:
+    ip_addr: 11.175.213.3
+    network_node_id: 31
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 31 --config config/default
+  themisReplica32:
+    ip_addr: 11.131.207.214
+    network_node_id: 32
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 32 --config config/default
+  themisReplica33:
+    ip_addr: 11.43.239.144
+    network_node_id: 33
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 33 --config config/default
+  themisReplica34:
+    ip_addr: 11.158.174.72
+    network_node_id: 34
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 34 --config config/default
+  themisReplica35:
+    ip_addr: 11.245.110.131
+    network_node_id: 35
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 35 --config config/default
+  themisReplica36:
+    ip_addr: 11.48.23.135
+    network_node_id: 36
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 36 --config config/default
+  themisReplica37:
+    ip_addr: 11.166.107.70
+    network_node_id: 37
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 37 --config config/default
+  themisReplica38:
+    ip_addr: 11.8.29.132
+    network_node_id: 38
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 38 --config config/default
+  themisReplica39:
+    ip_addr: 11.60.131.121
+    network_node_id: 39
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 39 --config config/default
+  themisReplica40:
+    ip_addr: 11.246.141.199
+    network_node_id: 40
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 40 --config config/default
+  themisReplica41:
+    ip_addr: 11.22.244.246
+    network_node_id: 41
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 41 --config config/default
+  themisReplica42:
+    ip_addr: 11.183.4.168
+    network_node_id: 42
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 42 --config config/default
+  themisReplica43:
+    ip_addr: 11.91.169.57
+    network_node_id: 43
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 43 --config config/default
+  themisReplica44:
+    ip_addr: 11.247.186.181
+    network_node_id: 44
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 44 --config config/default
+  themisReplica45:
+    ip_addr: 11.155.193.166
+    network_node_id: 45
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 45 --config config/default
+  themisReplica46:
+    ip_addr: 11.111.82.77
+    network_node_id: 46
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 46 --config config/default
+  themisReplica47:
+    ip_addr: 11.27.65.129
+    network_node_id: 47
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 47 --config config/default
+  themisReplica48:
+    ip_addr: 11.45.110.254
+    network_node_id: 48
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 48 --config config/default
+  themisReplica49:
+    ip_addr: 11.26.1.174
+    network_node_id: 49
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/themis-bench-app
+        environment: RUST_LOG=INFO
+        args: 49 --config config/default
+  themisClient0:
+    ip_addr: 11.161.231.216
+    network_node_id: 50
+    processes:
+      - path: /home/raphael/Documents/tool/themis/target/debug/bench-client
+        environment: RUST_LOG=INFO
+        args: '-d 8 --config config/default --payload 256 -c 50 --concurrent 1000'
+        start_time: 2 s

@@ -1,0 +1,111 @@
+RUST_LOG=info
+Opts {
+    clients: 4,
+    config: [
+        "config/delphi",
+    ],
+    payload: 256,
+    concurrent_requests: 1000,
+    requests: None,
+    duration: Some(
+        8,
+    ),
+    quiet: false,
+    no_wait_for_primary: false,
+}
+[2m2000-01-01T00:00:02.000000Z[0m [32m INFO[0m [2mthemis-clients/bench-client/src/main.rs[0m[2m:[0m[2m204:[0m waiting for 4 connected clients
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m121:[0m connected to 0
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m129:[0m Sucessfully send message to notify
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-core/src/net/tcp/group.rs[0m[2m:[0m[2m264:[0m Connected 0 from 11.50.60.75:10000
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m121:[0m connected to 0
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m129:[0m Sucessfully send message to notify
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-core/src/net/tcp/group.rs[0m[2m:[0m[2m264:[0m Connected 0 from 11.50.60.75:10000
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m121:[0m connected to 0
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m129:[0m Sucessfully send message to notify
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-core/src/net/tcp/group.rs[0m[2m:[0m[2m264:[0m Connected 0 from 11.50.60.75:10000
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m121:[0m connected to 0
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m129:[0m Sucessfully send message to notify
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-core/src/net/tcp/group.rs[0m[2m:[0m[2m264:[0m Connected 0 from 11.50.60.75:10000
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m103[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m148:[0m notify_r called
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m103[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m152:[0m Waiting on a total of 4 replicas, currently 1 connected; current id 0
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m121:[0m connected to 1
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m129:[0m Sucessfully send message to notify
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-core/src/net/tcp/group.rs[0m[2m:[0m[2m264:[0m Connected 1 from 11.225.37.243:10000
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m100[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m148:[0m notify_r called
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m100[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m152:[0m Waiting on a total of 4 replicas, currently 1 connected; current id 0
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m121:[0m connected to 1
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m129:[0m Sucessfully send message to notify
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-core/src/net/tcp/group.rs[0m[2m:[0m[2m264:[0m Connected 1 from 11.225.37.243:10000
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m101[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m148:[0m notify_r called
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m101[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m152:[0m Waiting on a total of 4 replicas, currently 1 connected; current id 0
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m121:[0m connected to 1
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m129:[0m Sucessfully send message to notify
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-core/src/net/tcp/group.rs[0m[2m:[0m[2m264:[0m Connected 1 from 11.225.37.243:10000
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m102[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m148:[0m notify_r called
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m102[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m152:[0m Waiting on a total of 4 replicas, currently 1 connected; current id 0
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m121:[0m connected to 1
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m129:[0m Sucessfully send message to notify
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-core/src/net/tcp/group.rs[0m[2m:[0m[2m264:[0m Connected 1 from 11.225.37.243:10000
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m103[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m148:[0m notify_r called
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m103[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m152:[0m Waiting on a total of 4 replicas, currently 2 connected; current id 1
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m121:[0m connected to 2
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m129:[0m Sucessfully send message to notify
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-core/src/net/tcp/group.rs[0m[2m:[0m[2m264:[0m Connected 2 from 11.40.209.122:10000
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m100[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m148:[0m notify_r called
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m100[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m152:[0m Waiting on a total of 4 replicas, currently 2 connected; current id 1
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m121:[0m connected to 2
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m129:[0m Sucessfully send message to notify
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-core/src/net/tcp/group.rs[0m[2m:[0m[2m264:[0m Connected 2 from 11.40.209.122:10000
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m101[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m148:[0m notify_r called
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m101[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m152:[0m Waiting on a total of 4 replicas, currently 2 connected; current id 1
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m121:[0m connected to 2
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m129:[0m Sucessfully send message to notify
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-core/src/net/tcp/group.rs[0m[2m:[0m[2m264:[0m Connected 2 from 11.40.209.122:10000
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m102[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m148:[0m notify_r called
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m102[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m152:[0m Waiting on a total of 4 replicas, currently 2 connected; current id 1
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m121:[0m connected to 2
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m129:[0m Sucessfully send message to notify
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-core/src/net/tcp/group.rs[0m[2m:[0m[2m264:[0m Connected 2 from 11.40.209.122:10000
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m103[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m148:[0m notify_r called
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m103[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m152:[0m Waiting on a total of 4 replicas, currently 3 connected; current id 2
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m121:[0m connected to 3
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m129:[0m Sucessfully send message to notify
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-core/src/net/tcp/group.rs[0m[2m:[0m[2m264:[0m Connected 3 from 11.164.240.98:10000
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m100[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m148:[0m notify_r called
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m100[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m152:[0m Waiting on a total of 4 replicas, currently 3 connected; current id 2
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m121:[0m connected to 3
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m129:[0m Sucessfully send message to notify
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-core/src/net/tcp/group.rs[0m[2m:[0m[2m264:[0m Connected 3 from 11.164.240.98:10000
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m101[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m148:[0m notify_r called
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m101[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m152:[0m Waiting on a total of 4 replicas, currently 3 connected; current id 2
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m121:[0m connected to 3
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m129:[0m Sucessfully send message to notify
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-core/src/net/tcp/group.rs[0m[2m:[0m[2m264:[0m Connected 3 from 11.164.240.98:10000
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m102[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m148:[0m notify_r called
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m102[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m152:[0m Waiting on a total of 4 replicas, currently 3 connected; current id 2
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m121:[0m connected to 3
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m129:[0m Sucessfully send message to notify
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis-core/src/net/tcp/group.rs[0m[2m:[0m[2m264:[0m Connected 3 from 11.164.240.98:10000
+[2m2000-01-01T00:00:06.096800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m103[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m148:[0m notify_r called
+[2m2000-01-01T00:00:06.096800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m103[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m152:[0m Waiting on a total of 4 replicas, currently 4 connected; current id 3
+[2m2000-01-01T00:00:06.096800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m103[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m159:[0m All replicas connected
+[2m2000-01-01T00:00:06.096800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m103[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m172:[0m Finished waiting on connections
+[2m2000-01-01T00:00:06.096800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m100[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m148:[0m notify_r called
+[2m2000-01-01T00:00:06.096800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m100[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m152:[0m Waiting on a total of 4 replicas, currently 4 connected; current id 3
+[2m2000-01-01T00:00:06.096800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m100[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m159:[0m All replicas connected
+[2m2000-01-01T00:00:06.096800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m100[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m172:[0m Finished waiting on connections
+[2m2000-01-01T00:00:06.096800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m101[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m148:[0m notify_r called
+[2m2000-01-01T00:00:06.096800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m101[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m152:[0m Waiting on a total of 4 replicas, currently 4 connected; current id 3
+[2m2000-01-01T00:00:06.096800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m101[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m159:[0m All replicas connected
+[2m2000-01-01T00:00:06.096800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m101[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m172:[0m Finished waiting on connections
+[2m2000-01-01T00:00:06.096800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m102[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m148:[0m notify_r called
+[2m2000-01-01T00:00:06.096800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m102[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m152:[0m Waiting on a total of 4 replicas, currently 4 connected; current id 3
+[2m2000-01-01T00:00:06.096800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m102[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m159:[0m All replicas connected
+[2m2000-01-01T00:00:06.096800Z[0m [32m INFO[0m [1mclient_thread[0m[1m{[0m[3mid[0m[2m=[0m102[1m}[0m[2m:[0m [2mthemis-client/src/lib.rs[0m[2m:[0m[2m172:[0m Finished waiting on connections
+[2m2000-01-01T00:00:06.096800Z[0m [32m INFO[0m [2mthemis-clients/bench-client/src/main.rs[0m[2m:[0m[2m209:[0m go
+[2m2000-01-01T00:00:07.096800Z[0m [32m INFO[0m [2mthemis-clients/bench-client/src/main.rs[0m[2m:[0m[2m231:[0m RPS: 259751
+[2m2000-01-01T00:00:07.096800Z[0m [32m INFO[0m [2mthemis-clients/bench-client/src/main.rs[0m[2m:[0m[2m232:[0m LAG: 15
+[2m2000-01-01T00:00:08.096800Z[0m [32m INFO[0m [2mthemis-clients/bench-client/src/main.rs[0m[2m:[0m[2m231:[0m RPS: 258330
+[2m2000-01-01T00:00:08.096800Z[0m [32m INFO[0m [2mthemis-clients/bench-client/src/main.rs[0m[2m:[0m[2m232:[0m LAG: 15
+[2m2000-01-01T00:00:09.096800Z[0m [32m INFO[0m [2mthemis-clients/bench-client/src/main.rs[0m[2m:[0m[2m231:[0m RPS: 259152
+[2m2000-01-01T00:00:09.096800Z[0m [32m INFO[0m [2mthemis-clients/bench-client/src/main.rs[0m[2m:[0m[2m232:[0m LAG: 15

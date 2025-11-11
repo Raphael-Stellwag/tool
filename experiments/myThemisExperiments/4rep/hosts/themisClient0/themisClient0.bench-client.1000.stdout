@@ -1,0 +1,47 @@
+RUST_LOG=INFO
+Opts {
+    clients: 4,
+    config: [
+        "config/default",
+    ],
+    payload: 256,
+    concurrent_requests: 1000,
+    requests: None,
+    duration: Some(
+        8,
+    ),
+    quiet: false,
+    no_wait_for_primary: false,
+}
+[2m2000-01-01T00:00:02.000000Z[0m [32m INFO[0m [2mbench_client[0m[2m:[0m waiting for 4 connected clients
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 0 from 11.49.106.215:10002
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 0 from 11.49.106.215:10002
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 0 from 11.49.106.215:10002
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 0 from 11.49.106.215:10002
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mbench_client[0m[2m:[0m go
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 1 from 11.35.180.151:10002
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 1 from 11.35.180.151:10002
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 1 from 11.35.180.151:10002
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 1 from 11.35.180.151:10002
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 2 from 11.48.68.87:10002
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 2 from 11.48.68.87:10002
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 2 from 11.48.68.87:10002
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 2 from 11.48.68.87:10002
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 3 from 11.65.189.144:10002
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 3 from 11.65.189.144:10002
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 3 from 11.65.189.144:10002
+[2m2000-01-01T00:00:02.002800Z[0m [32m INFO[0m [2mthemis_core::net::tcp::group[0m[2m:[0m Connected 3 from 11.65.189.144:10002
+[2m2000-01-01T00:00:03.002800Z[0m [32m INFO[0m [2mbench_client[0m[2m:[0m RPS: 128000
+[2m2000-01-01T00:00:03.002800Z[0m [32m INFO[0m [2mbench_client[0m[2m:[0m LAG: 30
+[2m2000-01-01T00:00:04.002800Z[0m [32m INFO[0m [2mbench_client[0m[2m:[0m RPS: 129600
+[2m2000-01-01T00:00:04.002800Z[0m [32m INFO[0m [2mbench_client[0m[2m:[0m LAG: 30
+[2m2000-01-01T00:00:05.002800Z[0m [32m INFO[0m [2mbench_client[0m[2m:[0m RPS: 129733
+[2m2000-01-01T00:00:05.002800Z[0m [32m INFO[0m [2mbench_client[0m[2m:[0m LAG: 30
+[2m2000-01-01T00:00:06.002800Z[0m [32m INFO[0m [2mbench_client[0m[2m:[0m RPS: 130266
+[2m2000-01-01T00:00:06.002800Z[0m [32m INFO[0m [2mbench_client[0m[2m:[0m LAG: 30
+[2m2000-01-01T00:00:07.002800Z[0m [32m INFO[0m [2mbench_client[0m[2m:[0m RPS: 129866
+[2m2000-01-01T00:00:07.002800Z[0m [32m INFO[0m [2mbench_client[0m[2m:[0m LAG: 30
+[2m2000-01-01T00:00:08.002800Z[0m [32m INFO[0m [2mbench_client[0m[2m:[0m RPS: 129866
+[2m2000-01-01T00:00:08.002800Z[0m [32m INFO[0m [2mbench_client[0m[2m:[0m LAG: 30
+[2m2000-01-01T00:00:09.002800Z[0m [32m INFO[0m [2mbench_client[0m[2m:[0m RPS: 129866
+[2m2000-01-01T00:00:09.002800Z[0m [32m INFO[0m [2mbench_client[0m[2m:[0m LAG: 30

@@ -1,0 +1,131 @@
+2000-01-01T00:00:00.000000Z  INFO themis_bench_app: STARTING REPLICA 47    
+2000-01-01T00:00:00.000000Z  INFO themis_bench_app: Logging: INFO    
+2000-01-01T00:00:00.000000Z  INFO themis_bench_app: selected runtime Single    
+2000-01-01T00:00:00.000000Z  INFO themis_pbft: PBFTConfig {
+    num_peers: 50,
+    faults: 16,
+    checkpoint_interval: 1200,
+    high_mark_delta: 3200,
+    request_timeout: 40000,
+    keep_checkpoints: 2,
+    request_proposals: false,
+    primary_forwarding: Full,
+    backup_forwarding: Full,
+    reply_mode: All,
+    debug_delay_proposal_us: 0,
+    debug_force_vc: ForceVc {
+        in_view: 0,
+        at_seq: 0,
+    },
+}
+2000-01-01T00:00:00.000000Z  INFO themis_bench_app: setup modules    
+2000-01-01T00:00:00.000000Z  INFO themis_core::net::tcp::endpoint: binding ("11.27.65.129", 10003)
+2000-01-01T00:00:00.000000Z  INFO themis_core::net::tcp::endpoint: binding ("11.27.65.129", 10002)
+2000-01-01T00:00:00.000000Z  INFO themis_core::modules: batching=true
+2000-01-01T00:00:00.000000Z  INFO themis_core::modules: BatchConfig {
+    min: 400,
+    max: 400,
+    timeout: Some(
+        10ms,
+    ),
+    rel_timeout: None,
+}
+2000-01-01T00:00:00.003000Z  INFO themis_core::net::tcp::group: Connected 48 from 11.45.110.254:15353
+2000-01-01T00:00:00.003000Z  INFO themis_core::net::tcp::group: Connected 49 from 11.26.1.174:35530
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 0 from 11.42.161.205:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 1 from 11.172.47.20:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 2 from 11.153.143.156:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 3 from 11.60.101.67:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 4 from 11.189.187.191:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 10 from 11.131.138.35:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 11 from 11.20.123.11:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 12 from 11.135.58.101:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 13 from 11.168.187.189:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 14 from 11.114.124.160:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 15 from 11.148.130.253:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 16 from 11.185.9.43:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 17 from 11.68.35.206:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 18 from 11.95.212.110:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 19 from 11.108.249.117:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 20 from 11.15.31.53:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 21 from 11.134.210.12:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 22 from 11.181.240.113:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 23 from 11.37.38.96:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 24 from 11.157.165.112:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 25 from 11.221.10.202:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 26 from 11.198.103.247:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 27 from 11.111.115.16:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 28 from 11.47.235.204:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 29 from 11.117.189.49:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 30 from 11.142.113.175:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 31 from 11.175.213.3:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 32 from 11.131.207.214:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 33 from 11.43.239.144:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 34 from 11.158.174.72:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 35 from 11.245.110.131:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 36 from 11.48.23.135:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 37 from 11.166.107.70:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 38 from 11.8.29.132:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 39 from 11.60.131.121:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 40 from 11.246.141.199:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 41 from 11.22.244.246:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 42 from 11.183.4.168:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 43 from 11.91.169.57:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 44 from 11.247.186.181:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 45 from 11.155.193.166:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 46 from 11.111.82.77:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 5 from 11.199.114.92:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 6 from 11.15.55.38:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 7 from 11.29.225.159:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 8 from 11.204.14.22:10003
+2000-01-01T00:00:00.004000Z  INFO themis_core::net::tcp::group: Connected 9 from 11.230.168.29:10003
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 100 from 11.161.231.216:24381
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 101 from 11.161.231.216:47157
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 102 from 11.161.231.216:61951
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 103 from 11.161.231.216:19709
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 104 from 11.161.231.216:21200
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 105 from 11.161.231.216:59265
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 106 from 11.161.231.216:26019
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 107 from 11.161.231.216:63638
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 108 from 11.161.231.216:36169
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 109 from 11.161.231.216:32536
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 110 from 11.161.231.216:51801
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 111 from 11.161.231.216:51117
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 112 from 11.161.231.216:57934
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 113 from 11.161.231.216:16723
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 114 from 11.161.231.216:49057
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 115 from 11.161.231.216:50002
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 116 from 11.161.231.216:15255
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 117 from 11.161.231.216:18930
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 118 from 11.161.231.216:43202
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 119 from 11.161.231.216:35146
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 120 from 11.161.231.216:29547
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 121 from 11.161.231.216:22260
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 122 from 11.161.231.216:36896
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 123 from 11.161.231.216:52333
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 124 from 11.161.231.216:60040
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 125 from 11.161.231.216:43102
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 126 from 11.161.231.216:49536
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 127 from 11.161.231.216:43248
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 128 from 11.161.231.216:10140
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 129 from 11.161.231.216:60392
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 130 from 11.161.231.216:55051
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 131 from 11.161.231.216:30096
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 132 from 11.161.231.216:65140
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 133 from 11.161.231.216:36798
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 134 from 11.161.231.216:17721
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 135 from 11.161.231.216:29363
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 136 from 11.161.231.216:36602
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 137 from 11.161.231.216:44330
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 138 from 11.161.231.216:42607
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 139 from 11.161.231.216:19726
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 140 from 11.161.231.216:21438
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 141 from 11.161.231.216:27058
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 142 from 11.161.231.216:34636
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 143 from 11.161.231.216:19617
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 144 from 11.161.231.216:45355
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 145 from 11.161.231.216:43403
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 146 from 11.161.231.216:18523
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 147 from 11.161.231.216:50505
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 148 from 11.161.231.216:48327
+2000-01-01T00:00:02.003500Z  INFO themis_core::net::tcp::group: Connected 149 from 11.161.231.216:16603
