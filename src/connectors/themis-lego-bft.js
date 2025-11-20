@@ -145,6 +145,9 @@ async function createConfigFile(replicaSettings, log) {
       min: Number(replicaSettings.minBatchSize),
       max: Number(replicaSettings.maxBatchSize),
     },
+    checkpoint: {
+      keep_checkpoints: 2
+    }
   }
 
   // Peers
@@ -180,7 +183,6 @@ async function createConfigFile(replicaSettings, log) {
         "checkpoint_interval": 1200,
         "high_mark_delta": 3200,
         "request_timeout": 3000,
-        "keep_checkpoints": 2,
         "primary_forwarding": 'None',
         "backup_forwarding": 'None',
         "reply_mode": 'All',
@@ -240,7 +242,7 @@ async function passArgs(hosts, clientSettings, log) {
       hosts[i].procs.push({
         path: path.join(process.env.THEMIS_LEGO_BFT_DIR, process.env.THEMIS_LEGO_BFT_CLIENT_BIN),
         env: 'RUST_LOG=info',
-        args: `-d ${clientSettings.duration} --config ${process.env.THEMIS_LEGO_BFT_CONFIG_PATH} --payload ${clientSettings.payload} -c ${clientSettings.clients} --concurrent ${clientSettings.concurrent}`,
+        args: `-d ${clientSettings.duration} --config ${process.env.THEMIS_LEGO_BFT_CONFIG_PATH} --payload ${clientSettings.payload} -c ${clientSettings.clients} --concurrent ${clientSettings.concurrent} --response-strategy ${clientSettings.response_strategy}`,
         startTime: clientSettings.startTime ? clientSettings.startTime : 0,
       })
       clientIndex++
