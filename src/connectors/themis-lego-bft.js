@@ -225,12 +225,15 @@ async function createConfigFile(replicaSettings, log) {
   }
   
   let configString = TOML.stringify(config)
-  /* Execution Dir??? */
-  await fs.writeFile(
-    path.join(process.env.THEMIS_LEGO_BFT_DIR, process.env.THEMIS_LEGO_BFT_CONFIG_FILE_PATH),
-    configString,
+  const configPath = path.join(
+    process.env.THEMIS_LEGO_BFT_DIR,
+    process.env.THEMIS_LEGO_BFT_CONFIG_FILE_PATH,
   )
-  log.info('Config file generated!')
+
+  await fs.mkdir(path.dirname(configPath), { recursive: true })
+  log.info("writing file out")
+  await fs.writeFile(configPath, configString)
+  log.info('Config file generated!, saving to ' + configPath)
   return hostIPs
 }
 async function passArgs(hosts, clientSettings, log) {
