@@ -1,7 +1,7 @@
 protocolName: themis-lego-bft
 protocolConnectorPath: ./connectors/themis-lego-bft.js
 experiments:
-  - name: 4rep # this will be passed to as data_dir value in shadow.yaml
+  - name: 1Gbit_4rep_replyAll # this will be passed to as data_dir value in shadow.yaml
     misc:
       runahead: 630 us
       duration: 10 s
@@ -21,7 +21,7 @@ experiments:
       replicas: 4
       minBatchSize: 400
       maxBatchSize: 400
-      replySize: 1
+      replySize: 256
       batchReplies: true
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000
@@ -36,7 +36,42 @@ experiments:
       payload: 256
       concurrent: 1_000
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
-  - name: 50rep # this will be passed to as data_dir value in shadow.yaml
+  - name: 1Gbit_4rep_replyReceiver # this will be passed to as data_dir value in shadow.yaml
+    misc:
+      runahead: 630 us
+      duration: 10 s
+      parallelism: 20
+      useShortestPath: false
+    network:
+      replicaBandwidthUp: 1 Gibits
+      replicaBandwidthDown: 1 Gibits
+      clientBandwidthUp: 1000 Gibits
+      clientBandwidthDown: 1000 Gibits
+      latency:
+        uniform: true
+        replicas: 1000 us
+        clients: 700 us
+      packetLoss: 0.0
+    replica: # should be validated by connectors (currently not done, they are passed as-is)
+      replicas: 4
+      minBatchSize: 400
+      maxBatchSize: 400
+      replySize: 256
+      batchReplies: true
+      requestTimeout: 40000
+      max_parallel_requests_per_client: 1_000
+      batchTimeout:
+        secs: 0
+        nano: 10_000_000
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-receiver"
+      clients: 4
+      startTime: 2 s
+      payload: 256
+      concurrent: 1_000
+      duration: 8 # WATCH OUT FOR THIS VALUE (for now)
+  - name: 1Gbit_50rep_replyAll # this will be passed to as data_dir value in shadow.yaml
     misc:
       runahead: 630 us
       duration: 10 s
@@ -56,7 +91,7 @@ experiments:
       replicas: 50
       minBatchSize: 400
       maxBatchSize: 400
-      replySize: 1
+      replySize: 256
       batchReplies: true
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000
@@ -71,7 +106,7 @@ experiments:
       payload: 256
       concurrent: 1_000
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
-  - name: 50rep1reply # this will be passed to as data_dir value in shadow.yaml
+  - name: 1Gbit_50rep_replyReceiver # this will be passed to as data_dir value in shadow.yaml
     misc:
       runahead: 630 us
       duration: 10 s
@@ -91,7 +126,7 @@ experiments:
       replicas: 50
       minBatchSize: 400
       maxBatchSize: 400
-      replySize: 1
+      replySize: 256
       batchReplies: true
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000
@@ -106,7 +141,7 @@ experiments:
       payload: 256
       concurrent: 1_000
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
-  - name: 100rep # this will be passed to as data_dir value in shadow.yaml
+  - name: 1Gbit_100rep_replyAll # this will be passed to as data_dir value in shadow.yaml
     misc:
       runahead: 630 us
       duration: 10 s
@@ -126,7 +161,7 @@ experiments:
       replicas: 100
       minBatchSize: 400
       maxBatchSize: 400
-      replySize: 1
+      replySize: 256
       batchReplies: true
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000
@@ -141,7 +176,7 @@ experiments:
       payload: 256
       concurrent: 1_000
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
-  - name: 100rep1reply # this will be passed to as data_dir value in shadow.yaml
+  - name: 1Gbit_100rep_replyReceiver # this will be passed to as data_dir value in shadow.yaml
     misc:
       runahead: 630 us
       duration: 10 s
@@ -161,7 +196,7 @@ experiments:
       replicas: 100
       minBatchSize: 400
       maxBatchSize: 400
-      replySize: 1
+      replySize: 256
       batchReplies: true
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000
@@ -176,7 +211,42 @@ experiments:
       payload: 256
       concurrent: 1_000
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
-  - name: 100repFull # this will be passed to as data_dir value in shadow.yaml
+  - name: 10Gbit_100rep_replyAll # this will be passed to as data_dir value in shadow.yaml
+    misc:
+      runahead: 630 us
+      duration: 10 s
+      parallelism: 20
+      useShortestPath: false
+    network:
+      replicaBandwidthUp: 10 Gibits
+      replicaBandwidthDown: 10 Gibits
+      clientBandwidthUp: 1000 Gibits
+      clientBandwidthDown: 1000 Gibits
+      latency:
+        uniform: true
+        replicas: 1000 us
+        clients: 700 us
+      packetLoss: 0.0
+    replica: # should be validated by connectors (currently not done, they are passed as-is)
+      replicas: 100
+      minBatchSize: 100
+      maxBatchSize: 100
+      replySize: 256
+      batchReplies: true
+      requestTimeout: 40000
+      max_parallel_requests_per_client: 300
+      batchTimeout:
+        secs: 0
+        nano: 10_000_000
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-all"
+      clients: 100
+      startTime: 2 s
+      payload: 256
+      concurrent: 300
+      duration: 8 # WATCH OUT FOR THIS VALUE (for now)
+  - name: 10Gbit_100rep_replyReceiver # this will be passed to as data_dir value in shadow.yaml
     misc:
       runahead: 630 us
       duration: 10 s
@@ -205,13 +275,13 @@ experiments:
         nano: 10_000_000
     client:
       numberOfHosts: 1
-      response_strategy: "reply-all"
+      response_strategy: "reply-receiver"
       clients: 100
       startTime: 2 s
       payload: 256
       concurrent: 3_000
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
-  - name: 100repFull1reply # this will be passed to as data_dir value in shadow.yaml
+  - name: 10Gbit_100rep_1000req_replyAll # this will be passed to as data_dir value in shadow.yaml
     misc:
       runahead: 630 us
       duration: 10 s
@@ -229,12 +299,47 @@ experiments:
       packetLoss: 0.0
     replica: # should be validated by connectors (currently not done, they are passed as-is)
       replicas: 100
-      minBatchSize: 1000
-      maxBatchSize: 1000
+      minBatchSize: 400
+      maxBatchSize: 400
       replySize: 256
       batchReplies: true
       requestTimeout: 40000
-      max_parallel_requests_per_client: 3_000
+      max_parallel_requests_per_client: 1000
+      batchTimeout:
+        secs: 0
+        nano: 10_000_000
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-all"
+      clients: 100
+      startTime: 2 s
+      payload: 256
+      concurrent: 300
+      duration: 8 # WATCH OUT FOR THIS VALUE (for now)
+  - name: 10Gbit_100rep_1000req_replyReceiver # this will be passed to as data_dir value in shadow.yaml
+    misc:
+      runahead: 630 us
+      duration: 10 s
+      parallelism: 20
+      useShortestPath: false
+    network:
+      replicaBandwidthUp: 10 Gibits
+      replicaBandwidthDown: 10 Gibits
+      clientBandwidthUp: 1000 Gibits
+      clientBandwidthDown: 1000 Gibits
+      latency:
+        uniform: true
+        replicas: 1000 us
+        clients: 700 us
+      packetLoss: 0.0
+    replica: # should be validated by connectors (currently not done, they are passed as-is)
+      replicas: 100
+      minBatchSize: 400
+      maxBatchSize: 400
+      replySize: 256
+      batchReplies: true
+      requestTimeout: 40000
+      max_parallel_requests_per_client: 1_000
       batchTimeout:
         secs: 0
         nano: 10_000_000
@@ -244,6 +349,6 @@ experiments:
       clients: 100
       startTime: 2 s
       payload: 256
-      concurrent: 3_000
+      concurrent: 1_000
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
 
