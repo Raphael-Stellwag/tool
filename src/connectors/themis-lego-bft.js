@@ -182,7 +182,7 @@ async function createConfigFile(replicaSettings, log) {
         "first_primary": 0,
         "checkpoint_interval": 1200,
         "high_mark_delta": 3200,
-        "request_timeout": 3000,
+        "request_timeout": replicaSettings.requestTimeout,
         "primary_forwarding": 'None',
         "backup_forwarding": 'None',
         "reply_mode": 'All',

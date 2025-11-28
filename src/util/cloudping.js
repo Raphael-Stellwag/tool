@@ -45,7 +45,7 @@ const fs = require('fs')
 
 // cloudping daily averages api endpoint
 
-const mapPath = '/home/cb/tool/src/util/aws21.json'
+const mapPath = './src/util/aws21.json'
 
 function getLatencies(log) {
     let latencies = new Object()

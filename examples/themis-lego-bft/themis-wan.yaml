@@ -1,0 +1,333 @@
+protocolName: themis-lego-bft
+protocolConnectorPath: ./connectors/themis-lego-bft.js
+experiments:
+  - name: AWS_21rep_100Mbit_1reply
+    misc:
+      runahead: 900 us
+      duration: 40 s
+      parallelism: 20
+      useShortestPath: false
+    network:
+      replicaBandwidthUp: 100 Mbit 
+      replicaBandwidthDown: 100 Mbit
+      clientBandwidthUp: 1000 Gibit
+      clientBandwidthDown: 1000 Gibit
+      latency:
+       uniform: false
+       replicas: [ 'eu-west-1':      1,
+                   'eu-west-2':      1,
+                   'eu-north-1':     1,
+                   'ap-south-1':     1,
+                   'eu-west-3':      1,
+                   'eu-south-1':     1,
+                   'eu-central-1':   1,
+                   'us-east-1':      1,
+                   'us-east-2':      1,
+                   'us-west-1':      1,
+                   'us-west-2':      1,
+                   'af-south-1':     1,
+                   'ap-northeast-3': 1,
+                   'ap-northeast-2': 1,
+                   'me-south-1':     1,
+                   'ap-northeast-1': 1,
+                   'sa-east-1':      1,
+                   'ca-central-1':   1,
+                   'ap-east-1':      1,
+                   'ap-southeast-1': 1,
+                   'ap-southeast-2': 1]
+       clients: ['ap-south-1': 1]
+      packetLoss: 0.0
+    replica:  
+      replicas: 21
+      minBatchSize: 1000
+      maxBatchSize: 1000
+      replySize: 256
+      batchReplies: true
+      requestTimeout: 40000
+      max_parallel_requests_per_client: 3_000
+      batchTimeout:
+        secs: 3
+        nano: 0
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-receiver"
+      clients: 21
+      startTime: 2 s
+      payload: 256
+      concurrent: 3_000
+      duration: 30 # WATCH OUT FOR THIS VALUE (for now)
+  - name: AWS_21rep_100Mbit_allreply
+    misc:
+      runahead: 900 us
+      duration: 40 s
+      parallelism: 20
+      useShortestPath: false
+    network:
+      replicaBandwidthUp: 100 Mbit 
+      replicaBandwidthDown: 100 Mbit
+      clientBandwidthUp: 1000 Gibit
+      clientBandwidthDown: 1000 Gibit
+      latency:
+       uniform: false
+       replicas: [ 'eu-west-1':      1,
+                   'eu-west-2':      1,
+                   'eu-north-1':     1,
+                   'ap-south-1':     1,
+                   'eu-west-3':      1,
+                   'eu-south-1':     1,
+                   'eu-central-1':   1,
+                   'us-east-1':      1,
+                   'us-east-2':      1,
+                   'us-west-1':      1,
+                   'us-west-2':      1,
+                   'af-south-1':     1,
+                   'ap-northeast-3': 1,
+                   'ap-northeast-2': 1,
+                   'me-south-1':     1,
+                   'ap-northeast-1': 1,
+                   'sa-east-1':      1,
+                   'ca-central-1':   1,
+                   'ap-east-1':      1,
+                   'ap-southeast-1': 1,
+                   'ap-southeast-2': 1]
+       clients: ['ap-south-1': 1]
+      packetLoss: 0.0
+    replica:  
+      replicas: 21
+      minBatchSize: 1000
+      maxBatchSize: 1000
+      replySize: 256
+      batchReplies: true
+      requestTimeout: 40000
+      max_parallel_requests_per_client: 3_000
+      batchTimeout:
+        secs: 3
+        nano: 0
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-all"
+      clients: 21
+      startTime: 2 s
+      payload: 256
+      concurrent: 3_000
+      duration: 30 # WATCH OUT FOR THIS VALUE (for now)
+  - name: AWS_100rep_100Mbit_allreply
+    misc:
+      runahead: 900 us
+      duration: 40 s
+      parallelism: 20
+      useShortestPath: false
+    network:
+      replicaBandwidthUp: 100 Mbit 
+      replicaBandwidthDown: 100 Mbit
+      clientBandwidthUp: 1000 Gibit
+      clientBandwidthDown: 1000 Gibit
+      latency:
+       uniform: false
+       replicas: [ 'eu-west-1':      5,
+                   'eu-west-2':      5,
+                   'eu-north-1':     5,
+                   'ap-south-1':     5,
+                   'eu-west-3':      5,
+                   'eu-south-1':     5,
+                   'eu-central-1':   5,
+                   'us-east-1':      5,
+                   'us-east-2':      5,
+                   'us-west-1':      5,
+                   'us-west-2':      5,
+                   'af-south-1':     5,
+                   'ap-northeast-3': 5,
+                   'ap-northeast-2': 5,
+                   'me-south-1':     5,
+                   'ap-northeast-1': 5,
+                   'sa-east-1':      4,
+                   'ca-central-1':   4,
+                   'ap-east-1':      4,
+                   'ap-southeast-1': 4,
+                   'ap-southeast-2': 4]
+       clients: ['ap-south-1': 1]
+      packetLoss: 0.0
+    replica:  
+      replicas: 100
+      minBatchSize: 100
+      maxBatchSize: 100
+      replySize: 256
+      batchReplies: true
+      requestTimeout: 40000
+      max_parallel_requests_per_client: 300
+      batchTimeout:
+        secs: 3
+        nano: 0
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-all"
+      clients: 100
+      startTime: 2 s
+      payload: 256
+      concurrent: 300
+      duration: 30 # WATCH OUT FOR THIS VALUE (for now)
+  - name: AWS_100rep_100Mbit_1reply
+    misc:
+      runahead: 900 us
+      duration: 40 s
+      parallelism: 20
+      useShortestPath: false
+    network:
+      replicaBandwidthUp: 100 Mbit 
+      replicaBandwidthDown: 100 Mbit
+      clientBandwidthUp: 1000 Gibit
+      clientBandwidthDown: 1000 Gibit
+      latency:
+       uniform: false
+       replicas: [ 'eu-west-1':      5,
+                   'eu-west-2':      5,
+                   'eu-north-1':     5,
+                   'ap-south-1':     5,
+                   'eu-west-3':      5,
+                   'eu-south-1':     5,
+                   'eu-central-1':   5,
+                   'us-east-1':      5,
+                   'us-east-2':      5,
+                   'us-west-1':      5,
+                   'us-west-2':      5,
+                   'af-south-1':     5,
+                   'ap-northeast-3': 5,
+                   'ap-northeast-2': 5,
+                   'me-south-1':     5,
+                   'ap-northeast-1': 5,
+                   'sa-east-1':      4,
+                   'ca-central-1':   4,
+                   'ap-east-1':      4,
+                   'ap-southeast-1': 4,
+                   'ap-southeast-2': 4]
+       clients: ['ap-south-1': 1]
+      packetLoss: 0.0
+    replica:  
+      replicas: 100
+      minBatchSize: 100
+      maxBatchSize: 100
+      replySize: 256
+      batchReplies: true
+      requestTimeout: 40000
+      max_parallel_requests_per_client: 300
+      batchTimeout:
+        secs: 3
+        nano: 0
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-receiver"
+      clients: 100
+      startTime: 2 s
+      payload: 256
+      concurrent: 300
+      duration: 30 # WATCH OUT FOR THIS VALUE (for now)
+  - name: AWS_100rep_1Gbit_1reply
+    misc:
+      runahead: 900 us
+      duration: 40 s
+      parallelism: 20
+      useShortestPath: false
+    network:
+      replicaBandwidthUp: 1 Gbit 
+      replicaBandwidthDown: 1 Gbit
+      clientBandwidthUp: 1000 Gibit
+      clientBandwidthDown: 1000 Gibit
+      latency:
+       uniform: false
+       replicas: [ 'eu-west-1':      5,
+                   'eu-west-2':      5,
+                   'eu-north-1':     5,
+                   'ap-south-1':     5,
+                   'eu-west-3':      5,
+                   'eu-south-1':     5,
+                   'eu-central-1':   5,
+                   'us-east-1':      5,
+                   'us-east-2':      5,
+                   'us-west-1':      5,
+                   'us-west-2':      5,
+                   'af-south-1':     5,
+                   'ap-northeast-3': 5,
+                   'ap-northeast-2': 5,
+                   'me-south-1':     5,
+                   'ap-northeast-1': 5,
+                   'sa-east-1':      4,
+                   'ca-central-1':   4,
+                   'ap-east-1':      4,
+                   'ap-southeast-1': 4,
+                   'ap-southeast-2': 4]
+       clients: ['ap-south-1': 1]
+      packetLoss: 0.0
+    replica:  
+      replicas: 100
+      minBatchSize: 1000
+      maxBatchSize: 1000
+      replySize: 256
+      batchReplies: true
+      requestTimeout: 40000
+      max_parallel_requests_per_client: 3_000
+      batchTimeout:
+        secs: 3
+        nano: 0
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-receiver"
+      clients: 100
+      startTime: 2 s
+      payload: 256
+      concurrent: 3_000
+      duration: 30 # WATCH OUT FOR THIS VALUE (for now)
+  - name: AWS_100rep_1Gbit_allreply
+    misc:
+      runahead: 900 us
+      duration: 40 s
+      parallelism: 20
+      useShortestPath: false
+    network:
+      replicaBandwidthUp: 1 Gbit 
+      replicaBandwidthDown: 1 Gbit
+      clientBandwidthUp: 1000 Gibit
+      clientBandwidthDown: 1000 Gibit
+      latency:
+       uniform: false
+       replicas: [ 'eu-west-1':      5,
+                   'eu-west-2':      5,
+                   'eu-north-1':     5,
+                   'ap-south-1':     5,
+                   'eu-west-3':      5,
+                   'eu-south-1':     5,
+                   'eu-central-1':   5,
+                   'us-east-1':      5,
+                   'us-east-2':      5,
+                   'us-west-1':      5,
+                   'us-west-2':      5,
+                   'af-south-1':     5,
+                   'ap-northeast-3': 5,
+                   'ap-northeast-2': 5,
+                   'me-south-1':     5,
+                   'ap-northeast-1': 5,
+                   'sa-east-1':      4,
+                   'ca-central-1':   4,
+                   'ap-east-1':      4,
+                   'ap-southeast-1': 4,
+                   'ap-southeast-2': 4]
+       clients: ['ap-south-1': 1]
+      packetLoss: 0.0
+    replica:  
+      replicas: 100
+      minBatchSize: 1000
+      maxBatchSize: 1000
+      replySize: 256
+      batchReplies: true
+      requestTimeout: 40000
+      max_parallel_requests_per_client: 3_000
+      batchTimeout:
+        secs: 3
+        nano: 0
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-all"
+      clients: 100
+      startTime: 2 s
+      payload: 256
+      concurrent: 3_000
+      duration: 30 # WATCH OUT FOR THIS VALUE (for now)
