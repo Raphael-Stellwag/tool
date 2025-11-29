@@ -5,7 +5,7 @@ experiments:
     misc:
       runahead: 900 us
       duration: 40 s
-      parallelism: 20
+      parallelism: 32
       useShortestPath: false
     network:
       replicaBandwidthUp: 100 Mbit 
@@ -60,7 +60,7 @@ experiments:
     misc:
       runahead: 900 us
       duration: 40 s
-      parallelism: 20
+      parallelism: 32
       useShortestPath: false
     network:
       replicaBandwidthUp: 100 Mbit 
@@ -115,7 +115,7 @@ experiments:
     misc:
       runahead: 900 us
       duration: 40 s
-      parallelism: 20
+      parallelism: 32
       useShortestPath: false
     network:
       replicaBandwidthUp: 100 Mbit 
@@ -170,7 +170,7 @@ experiments:
     misc:
       runahead: 900 us
       duration: 40 s
-      parallelism: 20
+      parallelism: 32
       useShortestPath: false
     network:
       replicaBandwidthUp: 100 Mbit 
@@ -225,7 +225,7 @@ experiments:
     misc:
       runahead: 900 us
       duration: 40 s
-      parallelism: 20
+      parallelism: 32
       useShortestPath: false
     network:
       replicaBandwidthUp: 1 Gbit 
@@ -280,7 +280,7 @@ experiments:
     misc:
       runahead: 900 us
       duration: 40 s
-      parallelism: 20
+      parallelism: 32
       useShortestPath: false
     network:
       replicaBandwidthUp: 1 Gbit 

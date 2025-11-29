@@ -5,7 +5,7 @@ experiments:
     misc:
       runahead: 630 us
       duration: 10 s
-      parallelism: 20
+      parallelism: 32
       useShortestPath: false
     network:
       replicaBandwidthUp: 1 Gibits
@@ -39,7 +39,7 @@ experiments:
     misc:
       runahead: 630 us
       duration: 10 s
-      parallelism: 20
+      parallelism: 32
       useShortestPath: false
     network:
       replicaBandwidthUp: 1 Gibits
