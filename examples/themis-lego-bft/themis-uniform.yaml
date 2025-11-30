@@ -23,6 +23,7 @@ experiments:
       maxBatchSize: 400
       replySize: 256
       batchReplies: true
+      rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000
       batchTimeout:
@@ -35,6 +36,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 1_000
+      rust_log: info
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 1Gbit_4rep_replyReceiver # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -58,6 +60,7 @@ experiments:
       maxBatchSize: 400
       replySize: 256
       batchReplies: true
+      rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000
       batchTimeout:
@@ -70,6 +73,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 1_000
+      rust_log: info
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 1Gbit_50rep_replyAll # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -93,6 +97,7 @@ experiments:
       maxBatchSize: 400
       replySize: 256
       batchReplies: true
+      rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000
       batchTimeout:
@@ -105,6 +110,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 1_000
+      rust_log: info
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 1Gbit_50rep_replyReceiver # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -128,6 +134,7 @@ experiments:
       maxBatchSize: 400
       replySize: 256
       batchReplies: true
+      rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000
       batchTimeout:
@@ -140,6 +147,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 1_000
+      rust_log: info
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 1Gbit_100rep_replyAll # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -163,6 +171,7 @@ experiments:
       maxBatchSize: 400
       replySize: 256
       batchReplies: true
+      rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000
       batchTimeout:
@@ -175,6 +184,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 1_000
+      rust_log: info
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 1Gbit_100rep_replyReceiver # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -198,6 +208,7 @@ experiments:
       maxBatchSize: 400
       replySize: 256
       batchReplies: true
+      rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000
       batchTimeout:
@@ -210,6 +221,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 1_000
+      rust_log: info
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 10Gbit_100rep_replyAll # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -233,6 +245,7 @@ experiments:
       maxBatchSize: 100
       replySize: 256
       batchReplies: true
+      rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 300
       batchTimeout:
@@ -245,6 +258,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 300
+      rust_log: info
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 10Gbit_100rep_replyReceiver # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -268,6 +282,7 @@ experiments:
       maxBatchSize: 1000
       replySize: 256
       batchReplies: true
+      rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 3_000
       batchTimeout:
@@ -280,6 +295,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 3_000
+      rust_log: info
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 10Gbit_100rep_1000req_replyAll # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -303,6 +319,7 @@ experiments:
       maxBatchSize: 400
       replySize: 256
       batchReplies: true
+      rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 1000
       batchTimeout:
@@ -315,6 +332,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 300
+      rust_log: info
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 10Gbit_100rep_1000req_replyReceiver # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -338,6 +356,7 @@ experiments:
       maxBatchSize: 400
       replySize: 256
       batchReplies: true
+      rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000
       batchTimeout:
@@ -350,5 +369,6 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 1_000
+      rust_log: info
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
 

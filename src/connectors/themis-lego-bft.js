@@ -82,6 +82,18 @@ function _parse(replicaSettings, clientSettings) {
     throw new Error('duration property of client object must be an Integer')
 }
 
+function resolveRustLogLevels(replicaSettings, clientSettings) {
+  const replicaLog =
+    (!isNullOrEmpty(replicaSettings.rustLog) && replicaSettings.rustLog) ||
+    (!isNullOrEmpty(replicaSettings.rust_log) && replicaSettings.rust_log) ||
+    'info'
+  const clientLog =
+    (!isNullOrEmpty(clientSettings.rustLog) && clientSettings.rustLog) ||
+    (!isNullOrEmpty(clientSettings.rust_log) && clientSettings.rust_log) ||
+    replicaLog
+  return { replicaLog, clientLog }
+}
+
 async function build(replicaSettings, clientSettings, log) {
   log.info('building Themis ...')
   let cmd = { proc: 'cargo', args: ['build', '--bins'] }
@@ -236,7 +248,11 @@ async function createConfigFile(replicaSettings, log) {
   log.info('Config file generated!, saving to ' + configPath)
   return hostIPs
 }
-async function passArgs(hosts, clientSettings, log) {
+async function passArgs(hosts, replicaSettings, clientSettings, log) {
+  const { replicaLog, clientLog } = resolveRustLogLevels(
+    replicaSettings,
+    clientSettings,
+  )
   let replicaIndex = 0
   let clientIndex = 0
   for (let i = 0; i < hosts.length; i++) {
@@ -244,7 +260,7 @@ async function passArgs(hosts, clientSettings, log) {
       hosts[i].procs = []
       hosts[i].procs.push({
         path: path.join(process.env.THEMIS_LEGO_BFT_DIR, process.env.THEMIS_LEGO_BFT_CLIENT_BIN),
-        env: 'RUST_LOG=info',
+        env: `RUST_LOG=${clientLog}`,
         args: `-d ${clientSettings.duration} --config ${process.env.THEMIS_LEGO_BFT_CONFIG_PATH} --payload ${clientSettings.payload} -c ${clientSettings.clients} --concurrent ${clientSettings.concurrent} --response-strategy ${clientSettings.response_strategy}`,
         startTime: clientSettings.startTime ? clientSettings.startTime : 0,
       })
@@ -254,7 +270,7 @@ async function passArgs(hosts, clientSettings, log) {
     hosts[i].procs = []
     hosts[i].procs.push({
       path: path.join(process.env.THEMIS_LEGO_BFT_DIR, process.env.THEMIS_LEGO_BFT_REPLICA_BIN),
-      env: 'RUST_LOG=info',
+      env: `RUST_LOG=${replicaLog}`,
       args: `${replicaIndex} --config ${process.env.THEMIS_LEGO_BFT_CONFIG_PATH}`,
       start_time: 0,
     })
@@ -274,7 +290,7 @@ async function configure(replicaSettings, clientSettings, log) {
   log.info('objects parsed!')
   await generateKeys(replicaSettings.replicas, log)
   let hosts = await createConfigFile(replicaSettings, log)
-  hosts = await passArgs(hosts, clientSettings, log)
+  hosts = await passArgs(hosts, replicaSettings, clientSettings, log)
   return hosts
 }
 
