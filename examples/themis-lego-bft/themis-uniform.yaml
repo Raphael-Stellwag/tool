@@ -23,6 +23,9 @@ experiments:
       maxBatchSize: 400
       replySize: 256
       batchReplies: true
+      bracha_hashed_batching: true
+      bracha_hashed_batch_size: 4
+      bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000
@@ -60,6 +63,9 @@ experiments:
       maxBatchSize: 400
       replySize: 256
       batchReplies: true
+      bracha_hashed_batching: true
+      bracha_hashed_batch_size: 4
+      bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000
@@ -97,6 +103,9 @@ experiments:
       maxBatchSize: 400
       replySize: 256
       batchReplies: true
+      bracha_hashed_batching: true
+      bracha_hashed_batch_size: 4
+      bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000
@@ -134,6 +143,9 @@ experiments:
       maxBatchSize: 400
       replySize: 256
       batchReplies: true
+      bracha_hashed_batching: true
+      bracha_hashed_batch_size: 25
+      bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000
@@ -171,6 +183,9 @@ experiments:
       maxBatchSize: 400
       replySize: 256
       batchReplies: true
+      bracha_hashed_batching: true
+      bracha_hashed_batch_size: 50
+      bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000
@@ -208,6 +223,9 @@ experiments:
       maxBatchSize: 400
       replySize: 256
       batchReplies: true
+      bracha_hashed_batching: true
+      bracha_hashed_batch_size: 50
+      bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000
@@ -245,6 +263,9 @@ experiments:
       maxBatchSize: 100
       replySize: 256
       batchReplies: true
+      bracha_hashed_batching: true
+      bracha_hashed_batch_size: 50
+      bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 300
@@ -282,6 +303,9 @@ experiments:
       maxBatchSize: 1000
       replySize: 256
       batchReplies: true
+      bracha_hashed_batching: true
+      bracha_hashed_batch_size: 50
+      bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 3_000
@@ -319,6 +343,9 @@ experiments:
       maxBatchSize: 400
       replySize: 256
       batchReplies: true
+      bracha_hashed_batching: true
+      bracha_hashed_batch_size: 50
+      bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 1000
@@ -356,6 +383,9 @@ experiments:
       maxBatchSize: 400
       replySize: 256
       batchReplies: true
+      bracha_hashed_batching: true
+      bracha_hashed_batch_size: 50
+      bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
       max_parallel_requests_per_client: 1_000

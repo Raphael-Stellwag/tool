@@ -1,0 +1,183 @@
+protocolName: themis-lego-bft
+protocolConnectorPath: ./connectors/themis-lego-bft.js
+experiments:
+  - name: AWS_100rep_3000_concurrent_10Gbit_1reply
+    misc:
+      runahead: 900 us
+      duration: 40 s
+      parallelism: 32
+      useShortestPath: false
+    network:
+      replicaBandwidthUp: 10 Gbit 
+      replicaBandwidthDown: 10 Gbit
+      clientBandwidthUp: 1000 Gibit
+      clientBandwidthDown: 1000 Gibit
+      latency:
+       uniform: false
+       replicas: [ 'eu-west-1':      5,
+                   'eu-west-2':      5,
+                   'eu-north-1':     5,
+                   'ap-south-1':     5,
+                   'eu-west-3':      5,
+                   'eu-south-1':     5,
+                   'eu-central-1':   5,
+                   'us-east-1':      5,
+                   'us-east-2':      5,
+                   'us-west-1':      5,
+                   'us-west-2':      5,
+                   'af-south-1':     5,
+                   'ap-northeast-3': 5,
+                   'ap-northeast-2': 5,
+                   'me-south-1':     5,
+                   'ap-northeast-1': 5,
+                   'sa-east-1':      4,
+                   'ca-central-1':   4,
+                   'ap-east-1':      4,
+                   'ap-southeast-1': 4,
+                   'ap-southeast-2': 4]
+       clients: ['eu-west-1': 1]
+      packetLoss: 0.0
+    replica:  
+      replicas: 100
+      minBatchSize: 1_000
+      maxBatchSize: 1_000
+      replySize: 256
+      batchReplies: true
+      bracha_hashed_batching: true
+      bracha_hashed_batch_size: 50
+      bracha_hashed_batch_timeout_ms: 500
+      rust_log: info
+      requestTimeout: 40000
+      max_parallel_requests_per_client: 3_000
+      batchTimeout:
+        secs: 3
+        nano: 0
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-receiver"
+      clients: 100
+      startTime: 2 s
+      payload: 256
+      concurrent: 3_000
+      rust_log: info
+      duration: 30 # WATCH OUT FOR THIS VALUE (for now)
+  - name: AWS_100rep_30000_concurrent_10Gbit_1reply
+    misc:
+      runahead: 900 us
+      duration: 40 s
+      parallelism: 32
+      useShortestPath: false
+    network:
+      replicaBandwidthUp: 10 Gbit 
+      replicaBandwidthDown: 10 Gbit
+      clientBandwidthUp: 1000 Gibit
+      clientBandwidthDown: 1000 Gibit
+      latency:
+       uniform: false
+       replicas: [ 'eu-west-1':      5,
+                   'eu-west-2':      5,
+                   'eu-north-1':     5,
+                   'ap-south-1':     5,
+                   'eu-west-3':      5,
+                   'eu-south-1':     5,
+                   'eu-central-1':   5,
+                   'us-east-1':      5,
+                   'us-east-2':      5,
+                   'us-west-1':      5,
+                   'us-west-2':      5,
+                   'af-south-1':     5,
+                   'ap-northeast-3': 5,
+                   'ap-northeast-2': 5,
+                   'me-south-1':     5,
+                   'ap-northeast-1': 5,
+                   'sa-east-1':      4,
+                   'ca-central-1':   4,
+                   'ap-east-1':      4,
+                   'ap-southeast-1': 4,
+                   'ap-southeast-2': 4]
+       clients: ['eu-west-1': 1]
+      packetLoss: 0.0
+    replica:  
+      replicas: 100
+      minBatchSize: 10_000
+      maxBatchSize: 10_000
+      replySize: 256
+      batchReplies: true
+      bracha_hashed_batching: true
+      bracha_hashed_batch_size: 50
+      bracha_hashed_batch_timeout_ms: 500
+      rust_log: info
+      requestTimeout: 40000
+      max_parallel_requests_per_client: 30_000
+      batchTimeout:
+        secs: 3
+        nano: 0
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-receiver"
+      clients: 100
+      startTime: 2 s
+      payload: 256
+      concurrent: 30_000
+      rust_log: info
+      duration: 30 # WATCH OUT FOR THIS VALUE (for now)
+  - name: AWS_100rep_90000_concurrent_10Gbit_1reply
+    misc:
+      runahead: 900 us
+      duration: 40 s
+      parallelism: 32
+      useShortestPath: false
+    network:
+      replicaBandwidthUp: 10 Gbit 
+      replicaBandwidthDown: 10 Gbit
+      clientBandwidthUp: 1000 Gibit
+      clientBandwidthDown: 1000 Gibit
+      latency:
+       uniform: false
+       replicas: [ 'eu-west-1':      5,
+                   'eu-west-2':      5,
+                   'eu-north-1':     5,
+                   'ap-south-1':     5,
+                   'eu-west-3':      5,
+                   'eu-south-1':     5,
+                   'eu-central-1':   5,
+                   'us-east-1':      5,
+                   'us-east-2':      5,
+                   'us-west-1':      5,
+                   'us-west-2':      5,
+                   'af-south-1':     5,
+                   'ap-northeast-3': 5,
+                   'ap-northeast-2': 5,
+                   'me-south-1':     5,
+                   'ap-northeast-1': 5,
+                   'sa-east-1':      4,
+                   'ca-central-1':   4,
+                   'ap-east-1':      4,
+                   'ap-southeast-1': 4,
+                   'ap-southeast-2': 4]
+       clients: ['eu-west-1': 1]
+      packetLoss: 0.0
+    replica:  
+      replicas: 100
+      minBatchSize: 30_000
+      maxBatchSize: 30_000
+      replySize: 256
+      batchReplies: true
+      bracha_hashed_batching: true
+      bracha_hashed_batch_size: 50
+      bracha_hashed_batch_timeout_ms: 400
+      rust_log: info
+      requestTimeout: 40000
+      max_parallel_requests_per_client: 90_000
+      batchTimeout:
+        secs: 3
+        nano: 0
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-receiver"
+      clients: 100
+      startTime: 2 s
+      payload: 256
+      concurrent: 90_000
+      rust_log: info
+      duration: 30 # WATCH OUT FOR THIS VALUE (for now)

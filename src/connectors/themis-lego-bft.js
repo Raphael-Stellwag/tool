@@ -184,6 +184,9 @@ async function createConfigFile(replicaSettings, log) {
         "verify_proposal": false,
         "hashed_echo_and_ready": true,
         "request_proposals": false,
+        "hashed_batching": replicaSettings.bracha_hashed_batching,
+        "hashed_batch_size": replicaSettings.bracha_hashed_batch_size,
+        "hashed_batch_timeout_ms": replicaSettings.bracha_hashed_batch_timeout_ms,
       },
       "peers": []
     }, 
