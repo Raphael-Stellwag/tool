@@ -1,7 +1,7 @@
 protocolName: themis-lego-bft
 protocolConnectorPath: ./connectors/themis-lego-bft.js
 experiments:
-  - name: AWS_100rep_3000_concurrent_10Gbit_1reply
+  - name: AWS_100rep_10000_concurrent_10Gbit_1reply
     misc:
       runahead: 900 us
       duration: 40 s
@@ -48,9 +48,17 @@ experiments:
       bracha_hashed_batch_timeout_ms: 500
       rust_log: info
       requestTimeout: 40000
-      max_parallel_requests_per_client: 3_000
+      checkpointInterval: 1200
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
+      max_parallel_requests_per_client: 10_000
+      reliable_sender_cache: false
       batchTimeout:
         secs: 3
+        nano: 0
+      batchMinDelay:
+        secs: 0
         nano: 0
     client:
       numberOfHosts: 1
@@ -58,10 +66,10 @@ experiments:
       clients: 100
       startTime: 2 s
       payload: 256
-      concurrent: 3_000
+      concurrent: 10_000
       rust_log: info
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)
-  - name: AWS_100rep_30000_concurrent_10Gbit_1reply
+  - name: AWS_100rep_50000_concurrent_10Gbit_1reply
     misc:
       runahead: 900 us
       duration: 40 s
@@ -108,9 +116,17 @@ experiments:
       bracha_hashed_batch_timeout_ms: 500
       rust_log: info
       requestTimeout: 40000
-      max_parallel_requests_per_client: 30_000
+      checkpointInterval: 1200
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
+      max_parallel_requests_per_client: 50_000
+      reliable_sender_cache: false
       batchTimeout:
         secs: 3
+        nano: 0
+      batchMinDelay:
+        secs: 0
         nano: 0
     client:
       numberOfHosts: 1
@@ -118,10 +134,10 @@ experiments:
       clients: 100
       startTime: 2 s
       payload: 256
-      concurrent: 30_000
+      concurrent: 50_000
       rust_log: info
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)
-  - name: AWS_100rep_90000_concurrent_10Gbit_1reply
+  - name: AWS_100rep_150000_concurrent_10Gbit_1reply
     misc:
       runahead: 900 us
       duration: 40 s
@@ -168,9 +184,17 @@ experiments:
       bracha_hashed_batch_timeout_ms: 400
       rust_log: info
       requestTimeout: 40000
-      max_parallel_requests_per_client: 90_000
+      checkpointInterval: 1200
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
+      max_parallel_requests_per_client: 150_000
+      reliable_sender_cache: false
       batchTimeout:
         secs: 3
+        nano: 0
+      batchMinDelay:
+        secs: 0
         nano: 0
     client:
       numberOfHosts: 1
@@ -178,6 +202,6 @@ experiments:
       clients: 100
       startTime: 2 s
       payload: 256
-      concurrent: 90_000
+      concurrent: 150_000
       rust_log: info
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)

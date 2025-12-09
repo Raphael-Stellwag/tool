@@ -131,6 +131,38 @@ async function createConfigFile(replicaSettings, log) {
   log.info('generating Themis config ...')
   let faults = Math.floor((replicaSettings.replicas - 1) / 3);
 
+  const reliableSenderCache =
+    replicaSettings.reliable_sender_cache !== undefined
+      ? replicaSettings.reliable_sender_cache
+      : false
+  const batchMinDelay =
+    replicaSettings.batchMinDelay ||
+    replicaSettings.batch_min_delay || {
+      secs: 0,
+      nano: 0,
+    }
+  const batchMinDelaySecs = Number(batchMinDelay.secs ?? 0)
+  const batchMinDelayNanos = Number(
+    batchMinDelay.nanos ?? batchMinDelay.nano ?? 0,
+  )
+  const checkpointInterval = Number(
+    replicaSettings.checkpointInterval ??
+      replicaSettings.checkpoint_interval ??
+      1200,
+  )
+  const authenticationClients =
+    replicaSettings.authenticationClients ??
+    replicaSettings.authentication_clients ??
+    'Blake3'
+  const brachaAuthenticationPeers =
+    replicaSettings.brachaAuthenticationPeers ??
+    replicaSettings.bracha_authentication_peers ??
+    'Blake3'
+  const pbftAuthenticationPeers =
+    replicaSettings.pbftAuthenticationPeers ??
+    replicaSettings.pbft_authentication_peers ??
+    'Ed25519'
+
   let config = {
     reply_size: replicaSettings.replySize,
     execution: 'Single',
@@ -144,15 +176,19 @@ async function createConfigFile(replicaSettings, log) {
       max_parallel_requests_per_client: replicaSettings.max_parallel_requests_per_client,
       max_request_size: 100_000_000,
       max_protocol_size: 15_000_000_000,
+      reliable_sender_cache: reliableSenderCache,
     },
     authentication: {
-      peers: auth.peers.scheme,
-      clients: auth.clients.scheme,
+      clients: authenticationClients,
     },
     batch: {
       timeout: {
         secs: Number(replicaSettings.batchTimeout.secs),
         nanos: Number(replicaSettings.batchTimeout.nano),
+      },
+      min_delay: {
+        secs: batchMinDelaySecs,
+        nanos: batchMinDelayNanos,
       },
       min: Number(replicaSettings.minBatchSize),
       max: Number(replicaSettings.maxBatchSize),
@@ -179,6 +215,9 @@ async function createConfigFile(replicaSettings, log) {
     },
     {
       "name": "bracha-rbc",
+      "authentication": {
+        "peers": brachaAuthenticationPeers,
+      },
       "config": {
         "faults": faults,
         "verify_proposal": false,
@@ -187,17 +226,20 @@ async function createConfigFile(replicaSettings, log) {
         "hashed_batching": replicaSettings.bracha_hashed_batching,
         "hashed_batch_size": replicaSettings.bracha_hashed_batch_size,
         "hashed_batch_timeout_ms": replicaSettings.bracha_hashed_batch_timeout_ms,
-      },
+      }, 
       "peers": []
     }, 
     {
       "name": "pbft",
+      "authentication": {
+        "peers": pbftAuthenticationPeers,
+      },
       "config": {
         "faults": faults,
         "first_primary": 0,
-        "checkpoint_interval": 1200,
-        "high_mark_delta": 3200,
-        "request_timeout": replicaSettings.requestTimeout,
+          "checkpoint_interval": checkpointInterval,
+          "high_mark_delta": 3200,
+          "request_timeout": replicaSettings.requestTimeout,
         "primary_forwarding": 'None',
         "backup_forwarding": 'None',
         "reply_mode": 'All',

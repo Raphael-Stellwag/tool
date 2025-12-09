@@ -28,10 +28,18 @@ experiments:
       bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
+      checkpointInterval: 1200
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 1_000
+      reliable_sender_cache: false
       batchTimeout:
         secs: 0
         nano: 10_000_000
+      batchMinDelay:
+        secs: 0
+        nano: 0
     client:
       numberOfHosts: 1
       response_strategy: "reply-all"
@@ -68,10 +76,18 @@ experiments:
       bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
+      checkpointInterval: 1200
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 1_000
+      reliable_sender_cache: false
       batchTimeout:
         secs: 0
         nano: 10_000_000
+      batchMinDelay:
+        secs: 0
+        nano: 0
     client:
       numberOfHosts: 1
       response_strategy: "reply-receiver"
@@ -108,10 +124,18 @@ experiments:
       bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
+      checkpointInterval: 1200
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 1_000
+      reliable_sender_cache: false
       batchTimeout:
         secs: 0
         nano: 10_000_000
+      batchMinDelay:
+        secs: 0
+        nano: 0
     client:
       numberOfHosts: 1
       response_strategy: "reply-all"
@@ -148,10 +172,18 @@ experiments:
       bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
+      checkpointInterval: 1200
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 1_000
+      reliable_sender_cache: false
       batchTimeout:
         secs: 0
         nano: 10_000_000
+      batchMinDelay:
+        secs: 0
+        nano: 0
     client:
       numberOfHosts: 1
       response_strategy: "reply-receiver"
@@ -188,10 +220,18 @@ experiments:
       bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
+      checkpointInterval: 1200
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 1_000
+      reliable_sender_cache: false
       batchTimeout:
         secs: 0
         nano: 10_000_000
+      batchMinDelay:
+        secs: 0
+        nano: 0
     client:
       numberOfHosts: 1
       response_strategy: "reply-all"
@@ -228,10 +268,18 @@ experiments:
       bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
+      checkpointInterval: 1200
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 1_000
+      reliable_sender_cache: false
       batchTimeout:
         secs: 0
         nano: 10_000_000
+      batchMinDelay:
+        secs: 0
+        nano: 0
     client:
       numberOfHosts: 1
       response_strategy: "reply-receiver"
@@ -268,10 +316,18 @@ experiments:
       bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
+      checkpointInterval: 1200
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 300
+      reliable_sender_cache: false
       batchTimeout:
         secs: 0
         nano: 10_000_000
+      batchMinDelay:
+        secs: 0
+        nano: 0
     client:
       numberOfHosts: 1
       response_strategy: "reply-all"
@@ -308,10 +364,18 @@ experiments:
       bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
+      checkpointInterval: 1200
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 3_000
+      reliable_sender_cache: false
       batchTimeout:
         secs: 0
         nano: 10_000_000
+      batchMinDelay:
+        secs: 0
+        nano: 0
     client:
       numberOfHosts: 1
       response_strategy: "reply-receiver"
@@ -348,10 +412,18 @@ experiments:
       bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
+      checkpointInterval: 1200
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 1000
+      reliable_sender_cache: false
       batchTimeout:
         secs: 0
         nano: 10_000_000
+      batchMinDelay:
+        secs: 0
+        nano: 0
     client:
       numberOfHosts: 1
       response_strategy: "reply-all"
@@ -388,10 +460,18 @@ experiments:
       bracha_hashed_batch_timeout_ms: 50
       rust_log: info
       requestTimeout: 40000
+      checkpointInterval: 1200
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 1_000
+      reliable_sender_cache: false
       batchTimeout:
         secs: 0
         nano: 10_000_000
+      batchMinDelay:
+        secs: 0
+        nano: 0
     client:
       numberOfHosts: 1
       response_strategy: "reply-receiver"

@@ -35,22 +35,98 @@ experiments:
                    'ap-east-1':      4,
                    'ap-southeast-1': 4,
                    'ap-southeast-2': 4]
-       clients: ['ap-south-1': 1]
+       clients: ['eu-central-1': 1]
       packetLoss: 0.0
     replica:  
       replicas: 100
-      minBatchSize: 1000
-      maxBatchSize: 1000
+      minBatchSize: 1_000
+      maxBatchSize: 1_000
       replySize: 256
       batchReplies: true      
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 50
-      bracha_hashed_batch_timeout_ms: 50
+      bracha_hashed_batch_timeout_ms: 250
       rust_log: info
       requestTimeout: 40000
-      max_parallel_requests_per_client: 3_000
+      checkpointInterval: 300
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
+      max_parallel_requests_per_client: 10_000
+      reliable_sender_cache: false
       batchTimeout:
         secs: 3
+        nano: 0
+      batchMinDelay:
+        secs: 0
+        nano: 200_000_000
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-receiver"
+      clients: 100
+      startTime: 2 s
+      payload: 256
+      concurrent: 10_000
+      rust_log: info
+      duration: 30 # WATCH OUT FOR THIS VALUE (for now)
+  - name: AWS_100rep_1Gbit_1reply_batched_echo_ready_no_delay
+    misc:
+      runahead: 900 us
+      duration: 40 s
+      parallelism: 32
+      useShortestPath: false
+    network:
+      replicaBandwidthUp: 1 Gbit 
+      replicaBandwidthDown: 1 Gbit
+      clientBandwidthUp: 1000 Gibit
+      clientBandwidthDown: 1000 Gibit
+      latency:
+       uniform: false
+       replicas: [ 'eu-west-1':      5,
+                   'eu-west-2':      5,
+                   'eu-north-1':     5,
+                   'ap-south-1':     5,
+                   'eu-west-3':      5,
+                   'eu-south-1':     5,
+                   'eu-central-1':   5,
+                   'us-east-1':      5,
+                   'us-east-2':      5,
+                   'us-west-1':      5,
+                   'us-west-2':      5,
+                   'af-south-1':     5,
+                   'ap-northeast-3': 5,
+                   'ap-northeast-2': 5,
+                   'me-south-1':     5,
+                   'ap-northeast-1': 5,
+                   'sa-east-1':      4,
+                   'ca-central-1':   4,
+                   'ap-east-1':      4,
+                   'ap-southeast-1': 4,
+                   'ap-southeast-2': 4]
+       clients: ['eu-central-1': 1]
+      packetLoss: 0.0
+    replica:  
+      replicas: 100
+      minBatchSize: 1_000
+      maxBatchSize: 1_000
+      replySize: 256
+      batchReplies: true      
+      bracha_hashed_batching: true
+      bracha_hashed_batch_size: 50
+      bracha_hashed_batch_timeout_ms: 250
+      rust_log: info
+      requestTimeout: 40000
+      checkpointInterval: 300
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
+      max_parallel_requests_per_client: 10_000
+      reliable_sender_cache: false
+      batchTimeout:
+        secs: 3
+        nano: 0
+      batchMinDelay:
+        secs: 0
         nano: 0
     client:
       numberOfHosts: 1
@@ -58,6 +134,145 @@ experiments:
       clients: 100
       startTime: 2 s
       payload: 256
-      concurrent: 3_000
+      concurrent: 10_000
       rust_log: info
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)
+  - name: AWS_100rep_1Gbit_1reply_no_batched_echo_ready
+    misc:
+      runahead: 900 us
+      duration: 40 s
+      parallelism: 32
+      useShortestPath: false
+    network:
+      replicaBandwidthUp: 1 Gbit 
+      replicaBandwidthDown: 1 Gbit
+      clientBandwidthUp: 1000 Gibit
+      clientBandwidthDown: 1000 Gibit
+      latency:
+       uniform: false
+       replicas: [ 'eu-west-1':      5,
+                   'eu-west-2':      5,
+                   'eu-north-1':     5,
+                   'ap-south-1':     5,
+                   'eu-west-3':      5,
+                   'eu-south-1':     5,
+                   'eu-central-1':   5,
+                   'us-east-1':      5,
+                   'us-east-2':      5,
+                   'us-west-1':      5,
+                   'us-west-2':      5,
+                   'af-south-1':     5,
+                   'ap-northeast-3': 5,
+                   'ap-northeast-2': 5,
+                   'me-south-1':     5,
+                   'ap-northeast-1': 5,
+                   'sa-east-1':      4,
+                   'ca-central-1':   4,
+                   'ap-east-1':      4,
+                   'ap-southeast-1': 4,
+                   'ap-southeast-2': 4]
+       clients: ['eu-central-1': 1]
+      packetLoss: 0.0
+    replica:  
+      replicas: 100
+      minBatchSize: 1_000
+      maxBatchSize: 1_000
+      replySize: 256
+      batchReplies: true      
+      bracha_hashed_batching: false
+      bracha_hashed_batch_size: 50
+      bracha_hashed_batch_timeout_ms: 250
+      rust_log: info
+      requestTimeout: 40000
+      checkpointInterval: 300
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
+      max_parallel_requests_per_client: 10_000
+      reliable_sender_cache: false
+      batchTimeout:
+        secs: 3
+        nano: 0
+      batchMinDelay:
+        secs: 0
+        nano: 200_000_000
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-receiver"
+      clients: 100
+      startTime: 2 s
+      payload: 256
+      concurrent: 10_000
+      rust_log: info
+      duration: 30 # WATCH OUT FOR THIS VALUE (for now)
+  - name: AWS_100rep_1Gbit_1reply_no_batched_echo_ready_no_delay
+    misc:
+      runahead: 900 us
+      duration: 40 s
+      parallelism: 32
+      useShortestPath: false
+    network:
+      replicaBandwidthUp: 1 Gbit 
+      replicaBandwidthDown: 1 Gbit
+      clientBandwidthUp: 1000 Gibit
+      clientBandwidthDown: 1000 Gibit
+      latency:
+       uniform: false
+       replicas: [ 'eu-west-1':      5,
+                   'eu-west-2':      5,
+                   'eu-north-1':     5,
+                   'ap-south-1':     5,
+                   'eu-west-3':      5,
+                   'eu-south-1':     5,
+                   'eu-central-1':   5,
+                   'us-east-1':      5,
+                   'us-east-2':      5,
+                   'us-west-1':      5,
+                   'us-west-2':      5,
+                   'af-south-1':     5,
+                   'ap-northeast-3': 5,
+                   'ap-northeast-2': 5,
+                   'me-south-1':     5,
+                   'ap-northeast-1': 5,
+                   'sa-east-1':      4,
+                   'ca-central-1':   4,
+                   'ap-east-1':      4,
+                   'ap-southeast-1': 4,
+                   'ap-southeast-2': 4]
+       clients: ['eu-central-1': 1]
+      packetLoss: 0.0
+    replica:  
+      replicas: 100
+      minBatchSize: 1_000
+      maxBatchSize: 1_000
+      replySize: 256
+      batchReplies: true      
+      bracha_hashed_batching: false
+      bracha_hashed_batch_size: 50
+      bracha_hashed_batch_timeout_ms: 250
+      rust_log: info
+      requestTimeout: 40000
+      checkpointInterval: 300
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
+      max_parallel_requests_per_client: 10_000
+      reliable_sender_cache: false
+      batchTimeout:
+        secs: 3
+        nano: 0
+      batchMinDelay:
+        secs: 0
+        nano: 0
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-receiver"
+      clients: 100
+      startTime: 2 s
+      payload: 256
+      concurrent: 10_000
+      rust_log: info
+      duration: 30 # WATCH OUT FOR THIS VALUE (for now)
+
+
+
