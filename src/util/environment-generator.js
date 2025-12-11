@@ -304,20 +304,20 @@ async function makeAWSGraph(
         else {
           latencies[i].push(
             awsLatencies[
-              replicasIPs[i].isClient
-                ? awsClients[clientIndex[i]]
-                : awsReplicas[replicaIndex[i]]
+            replicasIPs[i].isClient
+              ? awsClients[clientIndex[i]]
+              : awsReplicas[replicaIndex[i]]
             ][
-              replicasIPs[j].isClient
-                ? awsClients[clientIndex[j]]
-                : awsReplicas[replicaIndex[j]]
+            replicasIPs[j].isClient
+              ? awsClients[clientIndex[j]]
+              : awsReplicas[replicaIndex[j]]
             ] + ' us',
           )
         }
       } else
         latencies[i].push(
           awsLatencies[awsReplicas[replicaIndex[i]]][
-            awsReplicas[replicaIndex[j]]
+          awsReplicas[replicaIndex[j]]
           ] + ' us',
         )
       packet_losses[i].push(packet_loss)
@@ -345,6 +345,8 @@ let makeConfigTemplate = async (shadowTemplate, fullPathgml, dir, misc) => {
   if (!res.experimental) res.experimental = new Object()
   res.experimental.use_legacy_working_dir = true
   res.experimental.runahead = misc.runahead
+  if (misc.socket_send_buffer) res.experimental.socket_send_buffer = misc.socket_send_buffer
+  if (misc.socket_recv_buffer) res.experimental.socket_recv_buffer = misc.socket_recv_buffer
   res.network = new Object()
   res.network.graph = { type: 'gml', file: { path: fullPathgml } }
   res.network.use_shortest_path = misc.useShortestPath

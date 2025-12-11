@@ -147,8 +147,8 @@ async function createConfigFile(replicaSettings, log) {
   )
   const checkpointInterval = Number(
     replicaSettings.checkpointInterval ??
-      replicaSettings.checkpoint_interval ??
-      1200,
+    replicaSettings.checkpoint_interval ??
+    1200,
   )
   const authenticationClients =
     replicaSettings.authenticationClients ??
@@ -168,6 +168,11 @@ async function createConfigFile(replicaSettings, log) {
     execution: 'Single',
     batching: replicaSettings.batchReplies,
     faults: faults,
+    response_store: {
+      enable: replicaSettings.enable_response_store !== undefined
+        ? replicaSettings.enable_response_store
+        : true,
+    },
     client: {
       request_strategy: "round-robin-fixed",
       wait_on_all_replicas_to_be_ready: true
@@ -226,9 +231,9 @@ async function createConfigFile(replicaSettings, log) {
         "hashed_batching": replicaSettings.bracha_hashed_batching,
         "hashed_batch_size": replicaSettings.bracha_hashed_batch_size,
         "hashed_batch_timeout_ms": replicaSettings.bracha_hashed_batch_timeout_ms,
-      }, 
+      },
       "peers": []
-    }, 
+    },
     {
       "name": "pbft",
       "authentication": {
@@ -237,9 +242,9 @@ async function createConfigFile(replicaSettings, log) {
       "config": {
         "faults": faults,
         "first_primary": 0,
-          "checkpoint_interval": checkpointInterval,
-          "high_mark_delta": 3200,
-          "request_timeout": replicaSettings.requestTimeout,
+        "checkpoint_interval": checkpointInterval,
+        "high_mark_delta": 3200,
+        "request_timeout": replicaSettings.requestTimeout,
         "primary_forwarding": 'None',
         "backup_forwarding": 'None',
         "reply_mode": 'All',
@@ -248,7 +253,7 @@ async function createConfigFile(replicaSettings, log) {
         "remove_duplicate_requests": false,
       },
       "peers": [
-        
+
       ]
     }
   ]
@@ -265,7 +270,7 @@ async function createConfigFile(replicaSettings, log) {
       private_key: `${process.env.THEMIS_LEGO_BFT_KEYS_DIR}/${auth.peers.pvKeyPrefix}${replicaId}`,
       public_key: `${process.env.THEMIS_LEGO_BFT_KEYS_DIR}/${auth.peers.pubKeyPrefix}${replicaId}`,
     })
-    
+
     for (let j = 0; j < config.protocols.length; j++) {
       if (Object.hasOwn(config.protocols[j], "peers")) {
         config.protocols[j].peers.push({
@@ -275,12 +280,12 @@ async function createConfigFile(replicaSettings, log) {
           private_key: `${process.env.THEMIS_LEGO_BFT_KEYS_DIR}/${auth.peers.pvKeyPrefix}${replicaId}`,
           public_key: `${process.env.THEMIS_LEGO_BFT_KEYS_DIR}/${auth.peers.pubKeyPrefix}${replicaId}`,
         })
-      } 
+      }
     }
 
     replicaId++
   }
-  
+
   let configString = TOML.stringify(config)
   const configPath = path.join(
     process.env.THEMIS_LEGO_BFT_DIR,

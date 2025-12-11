@@ -7,6 +7,8 @@ experiments:
       duration: 10 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 1 Gibits
       replicaBandwidthDown: 1 Gibits
@@ -33,6 +35,7 @@ experiments:
       bracha_authentication_peers: "Dummy32B"
       pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 1_000
+      enable_response_store: false
       reliable_sender_cache: false
       batchTimeout:
         secs: 0
@@ -55,6 +58,8 @@ experiments:
       duration: 10 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 1 Gibits
       replicaBandwidthDown: 1 Gibits
@@ -81,6 +86,7 @@ experiments:
       bracha_authentication_peers: "Dummy32B"
       pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 1_000
+      enable_response_store: false
       reliable_sender_cache: false
       batchTimeout:
         secs: 0
@@ -103,6 +109,8 @@ experiments:
       duration: 10 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 1 Gibits
       replicaBandwidthDown: 1 Gibits
@@ -129,6 +137,7 @@ experiments:
       bracha_authentication_peers: "Dummy32B"
       pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 1_000
+      enable_response_store: false
       reliable_sender_cache: false
       batchTimeout:
         secs: 0
@@ -151,6 +160,8 @@ experiments:
       duration: 10 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 1 Gibits
       replicaBandwidthDown: 1 Gibits
@@ -177,6 +188,7 @@ experiments:
       bracha_authentication_peers: "Dummy32B"
       pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 1_000
+      enable_response_store: false
       reliable_sender_cache: false
       batchTimeout:
         secs: 0
@@ -199,6 +211,8 @@ experiments:
       duration: 10 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 1 Gibits
       replicaBandwidthDown: 1 Gibits
@@ -225,6 +239,7 @@ experiments:
       bracha_authentication_peers: "Dummy32B"
       pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 1_000
+      enable_response_store: false
       reliable_sender_cache: false
       batchTimeout:
         secs: 0
@@ -247,6 +262,8 @@ experiments:
       duration: 10 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 1 Gibits
       replicaBandwidthDown: 1 Gibits
@@ -273,6 +290,7 @@ experiments:
       bracha_authentication_peers: "Dummy32B"
       pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 1_000
+      enable_response_store: false
       reliable_sender_cache: false
       batchTimeout:
         secs: 0
@@ -295,6 +313,8 @@ experiments:
       duration: 10 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 10 Gibits
       replicaBandwidthDown: 10 Gibits
@@ -321,6 +341,7 @@ experiments:
       bracha_authentication_peers: "Dummy32B"
       pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 300
+      enable_response_store: false
       reliable_sender_cache: false
       batchTimeout:
         secs: 0
@@ -343,6 +364,8 @@ experiments:
       duration: 10 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 10 Gibits
       replicaBandwidthDown: 10 Gibits
@@ -369,6 +392,7 @@ experiments:
       bracha_authentication_peers: "Dummy32B"
       pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 3_000
+      enable_response_store: false
       reliable_sender_cache: false
       batchTimeout:
         secs: 0
@@ -391,6 +415,8 @@ experiments:
       duration: 10 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 10 Gibits
       replicaBandwidthDown: 10 Gibits
@@ -417,6 +443,7 @@ experiments:
       bracha_authentication_peers: "Dummy32B"
       pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 1000
+      enable_response_store: false
       reliable_sender_cache: false
       batchTimeout:
         secs: 0
@@ -439,6 +466,8 @@ experiments:
       duration: 10 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 10 Gibits
       replicaBandwidthDown: 10 Gibits
@@ -465,6 +494,7 @@ experiments:
       bracha_authentication_peers: "Dummy32B"
       pbft_authentication_peers: "Dummy32B"
       max_parallel_requests_per_client: 1_000
+      enable_response_store: false
       reliable_sender_cache: false
       batchTimeout:
         secs: 0

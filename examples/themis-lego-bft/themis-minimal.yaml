@@ -1,0 +1,105 @@
+protocolName: themis-lego-bft
+protocolConnectorPath: ./connectors/themis-lego-bft.js
+experiments:
+  - name: minimal_4rep_test
+    misc:
+      runahead: 630 us
+      duration: 30 s
+      parallelism: 32
+      useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
+    network:
+      replicaBandwidthUp: 1 Gibits
+      replicaBandwidthDown: 1 Gibits
+      clientBandwidthUp: 1000 Gibits
+      clientBandwidthDown: 1000 Gibits
+      latency:
+        uniform: true
+        replicas: 1000 us
+        clients: 700 us
+      packetLoss: 0.0
+    replica:
+      replicas: 4
+      minBatchSize: 10_000
+      maxBatchSize: 10_000
+      replySize: 256
+      batchReplies: true
+      bracha_hashed_batching: true
+      bracha_hashed_batch_size: 4
+      bracha_hashed_batch_timeout_ms: 5
+      rust_log: info
+      requestTimeout: 10000
+      checkpointInterval: 100
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
+      max_parallel_requests_per_client: 100_000
+      enable_response_store: false
+      reliable_sender_cache: false
+      batchTimeout:
+        secs: 1
+        nano: 0
+      batchMinDelay:
+        secs: 0
+        nano: 0
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-receiver"
+      clients: 4
+      startTime: 1 s
+      payload: 256
+      concurrent: 100_000
+      rust_log: debug
+      duration: 30
+  - name: minimal_4rep_test_50mb
+    misc:
+      runahead: 630 us
+      duration: 30 s
+      parallelism: 32
+      useShortestPath: false
+      socket_send_buffer: "50 MiB"
+      socket_recv_buffer: "50 MiB"
+    network:
+      replicaBandwidthUp: 1 Gibits
+      replicaBandwidthDown: 1 Gibits
+      clientBandwidthUp: 1000 Gibits
+      clientBandwidthDown: 1000 Gibits
+      latency:
+        uniform: true
+        replicas: 1000 us
+        clients: 700 us
+      packetLoss: 0.0
+    replica:
+      replicas: 4
+      minBatchSize: 10_000
+      maxBatchSize: 10_000
+      replySize: 256
+      batchReplies: true
+      bracha_hashed_batching: true
+      bracha_hashed_batch_size: 4
+      bracha_hashed_batch_timeout_ms: 5
+      rust_log: info
+      requestTimeout: 10000
+      checkpointInterval: 100
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
+      max_parallel_requests_per_client: 100_000
+      enable_response_store: false
+      reliable_sender_cache: false
+      batchTimeout:
+        secs: 1
+        nano: 0
+      batchMinDelay:
+        secs: 0
+        nano: 0
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-receiver"
+      clients: 4
+      startTime: 1 s
+      payload: 256
+      concurrent: 100_000
+      rust_log: debug
+      duration: 30

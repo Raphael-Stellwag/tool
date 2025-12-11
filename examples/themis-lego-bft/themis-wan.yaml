@@ -7,6 +7,8 @@ experiments:
       duration: 40 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 10 Gbit 
       replicaBandwidthDown: 10 Gbit
@@ -76,6 +78,8 @@ experiments:
       duration: 40 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 10 Gbit 
       replicaBandwidthDown: 10 Gbit
@@ -144,6 +148,8 @@ experiments:
       duration: 40 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 10 Gbit 
       replicaBandwidthDown: 10 Gbit
@@ -212,6 +218,8 @@ experiments:
       duration: 40 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 10 Gbit 
       replicaBandwidthDown: 10 Gbit
@@ -280,6 +288,8 @@ experiments:
       duration: 40 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 1 Gbit 
       replicaBandwidthDown: 1 Gbit
@@ -348,6 +358,8 @@ experiments:
       duration: 40 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 100 Mbit 
       replicaBandwidthDown: 100 Mbit
@@ -416,6 +428,8 @@ experiments:
       duration: 40 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 100 Mbit 
       replicaBandwidthDown: 100 Mbit
@@ -484,6 +498,8 @@ experiments:
       duration: 40 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 100 Mbit 
       replicaBandwidthDown: 100 Mbit
@@ -552,6 +568,8 @@ experiments:
       duration: 40 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 100 Mbit 
       replicaBandwidthDown: 100 Mbit
@@ -620,6 +638,8 @@ experiments:
       duration: 40 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 1 Gbit 
       replicaBandwidthDown: 1 Gbit
@@ -688,6 +708,8 @@ experiments:
       duration: 40 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
     network:
       replicaBandwidthUp: 1 Gbit 
       replicaBandwidthDown: 1 Gbit
