@@ -28,7 +28,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 4
       bracha_hashed_batch_timeout_ms: 5
-      rust_log: info
+      rust_log: debug
       requestTimeout: 10000
       checkpointInterval: 100
       authentication_clients: "Dummy32B"
@@ -79,7 +79,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 4
       bracha_hashed_batch_timeout_ms: 5
-      rust_log: info
+      rust_log: debug
       requestTimeout: 10000
       checkpointInterval: 100
       authentication_clients: "Dummy32B"

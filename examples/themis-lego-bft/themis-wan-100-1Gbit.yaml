@@ -48,7 +48,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 50
       bracha_hashed_batch_timeout_ms: 250
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 300
       authentication_clients: "Dummy32B"
@@ -70,7 +70,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 10_000
-      rust_log: info
+      rust_log: debug
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)
   - name: AWS_100rep_1Gbit_1reply_batched_echo_ready_no_delay
     misc:
@@ -119,7 +119,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 50
       bracha_hashed_batch_timeout_ms: 250
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 300
       authentication_clients: "Dummy32B"
@@ -141,7 +141,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 10_000
-      rust_log: info
+      rust_log: debug
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)
   - name: AWS_100rep_1Gbit_1reply_no_batched_echo_ready
     misc:
@@ -190,7 +190,7 @@ experiments:
       bracha_hashed_batching: false
       bracha_hashed_batch_size: 50
       bracha_hashed_batch_timeout_ms: 250
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 300
       authentication_clients: "Dummy32B"
@@ -212,7 +212,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 10_000
-      rust_log: info
+      rust_log: debug
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)
   - name: AWS_100rep_1Gbit_1reply_no_batched_echo_ready_no_delay
     misc:
@@ -261,7 +261,7 @@ experiments:
       bracha_hashed_batching: false
       bracha_hashed_batch_size: 50
       bracha_hashed_batch_timeout_ms: 250
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 300
       authentication_clients: "Dummy32B"
@@ -283,7 +283,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 10_000
-      rust_log: info
+      rust_log: debug
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)
 
 

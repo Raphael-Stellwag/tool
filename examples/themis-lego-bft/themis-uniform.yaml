@@ -28,7 +28,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 4
       bracha_hashed_batch_timeout_ms: 50
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -50,7 +50,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 1_000
-      rust_log: info
+      rust_log: debug
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 1Gbit_4rep_replyReceiver # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -79,7 +79,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 4
       bracha_hashed_batch_timeout_ms: 50
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -101,7 +101,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 1_000
-      rust_log: info
+      rust_log: debug
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 1Gbit_50rep_replyAll # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -130,7 +130,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 4
       bracha_hashed_batch_timeout_ms: 50
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -152,7 +152,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 1_000
-      rust_log: info
+      rust_log: debug
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 1Gbit_50rep_replyReceiver # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -181,7 +181,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 25
       bracha_hashed_batch_timeout_ms: 50
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -203,7 +203,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 1_000
-      rust_log: info
+      rust_log: debug
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 1Gbit_100rep_replyAll # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -232,7 +232,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 50
       bracha_hashed_batch_timeout_ms: 50
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -254,7 +254,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 1_000
-      rust_log: info
+      rust_log: debug
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 1Gbit_100rep_replyReceiver # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -283,7 +283,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 50
       bracha_hashed_batch_timeout_ms: 50
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -305,7 +305,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 1_000
-      rust_log: info
+      rust_log: debug
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 10Gbit_100rep_replyAll # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -334,7 +334,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 50
       bracha_hashed_batch_timeout_ms: 50
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -356,7 +356,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 300
-      rust_log: info
+      rust_log: debug
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 10Gbit_100rep_replyReceiver # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -385,7 +385,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 50
       bracha_hashed_batch_timeout_ms: 50
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -407,7 +407,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 3_000
-      rust_log: info
+      rust_log: debug
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 10Gbit_100rep_1000req_replyAll # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -436,7 +436,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 50
       bracha_hashed_batch_timeout_ms: 50
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -458,7 +458,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 300
-      rust_log: info
+      rust_log: debug
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
   - name: 10Gbit_100rep_1000req_replyReceiver # this will be passed to as data_dir value in shadow.yaml
     misc:
@@ -487,7 +487,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 50
       bracha_hashed_batch_timeout_ms: 50
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -509,6 +509,6 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 1_000
-      rust_log: info
+      rust_log: debug
       duration: 8 # WATCH OUT FOR THIS VALUE (for now)
 

@@ -49,7 +49,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 21
       bracha_hashed_batch_timeout_ms: 500
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -70,7 +70,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 90_000
-      rust_log: info
+      rust_log: debug
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)
   - name: AWS_100rep_30000_concurrent_10Gbit_1reply
     misc:
@@ -119,7 +119,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 50
       bracha_hashed_batch_timeout_ms: 500
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -140,7 +140,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 30_000
-      rust_log: info
+      rust_log: debug
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)
   - name: AWS_21rep_30000_concurrent_10Gbit_1reply
     misc:
@@ -189,7 +189,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 21
       bracha_hashed_batch_timeout_ms: 500
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -210,7 +210,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 30_000
-      rust_log: info
+      rust_log: debug
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)
   - name: AWS_21rep_10Gbit_1reply
     misc:
@@ -259,7 +259,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 21
       bracha_hashed_batch_timeout_ms: 500
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -280,7 +280,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 3_000
-      rust_log: info
+      rust_log: debug
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)
   - name: AWS_21rep_1Gbit_1reply
     misc:
@@ -329,7 +329,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 21
       bracha_hashed_batch_timeout_ms: 500
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -350,7 +350,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 3_000
-      rust_log: info
+      rust_log: debug
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)
   - name: AWS_21rep_100Mbit_1reply
     misc:
@@ -399,7 +399,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 21
       bracha_hashed_batch_timeout_ms: 500
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -420,7 +420,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 3_000
-      rust_log: info
+      rust_log: debug
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)
   - name: AWS_21rep_100Mbit_allreply
     misc:
@@ -469,7 +469,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 21
       bracha_hashed_batch_timeout_ms: 500
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -490,7 +490,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 3_000
-      rust_log: info
+      rust_log: debug
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)
   - name: AWS_100rep_100Mbit_allreply
     misc:
@@ -539,7 +539,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 100
       bracha_hashed_batch_timeout_ms: 500
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -560,7 +560,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 300
-      rust_log: info
+      rust_log: debug
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)
   - name: AWS_100rep_100Mbit_1reply
     misc:
@@ -609,7 +609,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 100
       bracha_hashed_batch_timeout_ms: 500
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -630,7 +630,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 300
-      rust_log: info
+      rust_log: debug
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)
   - name: AWS_100rep_1Gbit_1reply
     misc:
@@ -679,7 +679,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 100
       bracha_hashed_batch_timeout_ms: 500
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -700,7 +700,7 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 3_000
-      rust_log: info
+      rust_log: debug
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)
   - name: AWS_100rep_1Gbit_allreply
     misc:
@@ -749,7 +749,7 @@ experiments:
       bracha_hashed_batching: true
       bracha_hashed_batch_size: 100
       bracha_hashed_batch_timeout_ms: 500
-      rust_log: info
+      rust_log: debug
       requestTimeout: 40000
       checkpointInterval: 1200
       authentication_clients: "Dummy32B"
@@ -770,5 +770,5 @@ experiments:
       startTime: 2 s
       payload: 256
       concurrent: 3_000
-      rust_log: info
+      rust_log: debug
       duration: 30 # WATCH OUT FOR THIS VALUE (for now)
