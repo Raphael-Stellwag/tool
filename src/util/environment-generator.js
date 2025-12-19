@@ -351,6 +351,9 @@ let makeConfigTemplate = async (shadowTemplate, fullPathgml, dir, misc) => {
   res.network.graph = { type: 'gml', file: { path: fullPathgml } }
   res.network.use_shortest_path = misc.useShortestPath
   res.hosts = new Object()
+  res.host_defaults = {
+    pcap_directory: "."
+  }
   return res
 }
 let makeHost = (res, name, ip, network_node_id, procs) => {

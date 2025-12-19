@@ -349,32 +349,65 @@ function getProcessName() {
 }
 
 async function getStats(experimentId, log) {
-  let clientFile = await fs.readFile(
-    path.join(
-      path.join(process.env.THEMIS_LEGO_BFT_EXPERIMENTS_OUTPUT_DIR, experimentId),
-      path.join(
-        `hosts/${process.env.THEMIS_LEGO_BFT_CLIENT_HOST_PREFIX}0/${process.env.THEMIS_LEGO_BFT_CLIENT_HOST_PREFIX}0.bench-client.1000.stdout`,
-      ),
-    ),
+  const readline = require('readline')
+  const fsStream = require('fs')
+
+  const clientFilePath = path.join(
+    process.env.THEMIS_LEGO_BFT_EXPERIMENTS_OUTPUT_DIR,
+    experimentId,
+    `hosts/${process.env.THEMIS_LEGO_BFT_CLIENT_HOST_PREFIX}0/${process.env.THEMIS_LEGO_BFT_CLIENT_HOST_PREFIX}0.bench-client.1000.stdout`
   )
-  let clientFileLines = clientFile.toString().split('\n')
-  let RPSEntries = []
-  let LAGEntries = []
-  clientFileLines.forEach((line) => {
+
+  // Check if file exists
+  try {
+    await fs.access(clientFilePath)
+  } catch (e) {
+    log.warn(`Client log file not found: ${clientFilePath}`)
+    return {
+      maxThroughput: -1,
+      avgThroughput: -1,
+      latencyAll: -1,
+      latencyOutlierRemoved: -1,
+    }
+  }
+
+  // Use streaming to handle large files
+  const RPSEntries = []
+  const LAGEntries = []
+
+  const fileStream = fsStream.createReadStream(clientFilePath)
+  const rl = readline.createInterface({
+    input: fileStream,
+    crlfDelay: Infinity
+  })
+
+  for await (const line of rl) {
     if (line.includes('RPS:') && !line.includes('Total rps:')) {
-      let rps = parseFloat(line.split('RPS: ')[1].replace(/(\r\n|\n|\r)/gm, ''))
+      const rps = parseFloat(line.split('RPS: ')[1])
       if (rps > 0) RPSEntries.push(rps)
     }
     if (line.includes('LAG:') && !line.includes('Total lag:')) {
-      let lag = parseFloat(line.split('LAG: ')[1].replace(/(\r\n|\n|\r)/gm, ''))
+      const lag = parseFloat(line.split('LAG: ')[1])
       if (lag > 0) LAGEntries.push(lag)
     }
-  })
-  let maxThroughput = math.max(RPSEntries)
-  let avgThroughput = math.mean(RPSEntries)
-  let avgLag = math.mean(LAGEntries)
-  let latencyOutlierRemoved = removeOutliers(LAGEntries)
-  let avgLatNoOutlier = math.mean(latencyOutlierRemoved)
+  }
+
+  if (RPSEntries.length === 0 || LAGEntries.length === 0) {
+    log.warn('No RPS/LAG entries found in client log')
+    return {
+      maxThroughput: -1,
+      avgThroughput: -1,
+      latencyAll: -1,
+      latencyOutlierRemoved: -1,
+    }
+  }
+
+  const maxThroughput = math.max(RPSEntries)
+  const avgThroughput = math.mean(RPSEntries)
+  const avgLag = math.mean(LAGEntries)
+  const latencyOutlierRemoved = removeOutliers(LAGEntries)
+  const avgLatNoOutlier = math.mean(latencyOutlierRemoved)
+
   return {
     maxThroughput: maxThroughput,
     avgThroughput: avgThroughput,
@@ -382,6 +415,19 @@ async function getStats(experimentId, log) {
     latencyOutlierRemoved: avgLatNoOutlier,
   }
 }
+async function postRun(experimentId, log) {
+  const experimentDir = path.join(process.env.THEMIS_LEGO_BFT_EXPERIMENTS_OUTPUT_DIR, experimentId)
+  const analyzeScript = path.join(__dirname, '..', '..', 'scripts', 'themis-lego-bft', 'analyze.sh')
+
+  try {
+    log.info('Running post-experiment analysis...')
+    await promisified_spawn('bash', [analyzeScript, experimentDir], process.env.THEMIS_LEGO_BFT_EXECUTION_DIR, log)
+    log.info('Post-experiment analysis completed')
+  } catch (e) {
+    log.warn(`Post-experiment analysis failed: ${e.message}`)
+  }
+}
+
 module.exports = {
   build,
   configure,
@@ -389,4 +435,5 @@ module.exports = {
   getStats,
   getExecutionDir,
   getExperimentsOutputDirectory,
+  postRun,
 }

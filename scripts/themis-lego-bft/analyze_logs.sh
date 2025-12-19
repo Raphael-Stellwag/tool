@@ -1,19 +1,43 @@
 #!/bin/bash
 
-# Default arguments
-PROJECT="${1:-themis-lego-bft}"
-TEST_SUITE="${2:-minimal_4rep_test}"
-RUN_DIR="${3:-hosts}"
+# Log Analysis Tool for Themis experiments
+# Usage: ./analyze_logs.sh <experiment_dir>
+#
+# Analyzes replica logs for batching, RBC, and PBFT metrics.
 
-BASE_DIR="experiments/$PROJECT/$TEST_SUITE/$RUN_DIR"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-if [ ! -d "$BASE_DIR" ]; then
-    echo "Error: Directory $BASE_DIR does not exist."
-    echo "Current directory: $(pwd)"
+# Accept experiment directory as first argument
+if [ -z "$1" ]; then
+    echo "Usage: $0 <experiment_dir>"
+    echo "Example: $0 experiments/themis-lego-bft/minimal_4rep_test"
     exit 1
 fi
 
+EXPERIMENT_DIR="$1"
+
+# Find hosts directory
+if [ -d "$EXPERIMENT_DIR/hosts" ]; then
+    BASE_DIR="$EXPERIMENT_DIR/hosts"
+elif [ -d "$EXPERIMENT_DIR" ]; then
+    BASE_DIR="$EXPERIMENT_DIR"
+else
+    echo "Error: Cannot find hosts in '$EXPERIMENT_DIR'"
+    exit 1
+fi
+
+# Set up output
+ANALYSIS_DIR="$EXPERIMENT_DIR/analysis"
+OUTPUT_FILE="$ANALYSIS_DIR/logs_analysis.txt"
+mkdir -p "$ANALYSIS_DIR"
+
 echo "Analyzing logs in: $BASE_DIR"
+echo "Output will be saved to: $OUTPUT_FILE"
+
+# Wrap all analysis in a function for output capture
+run_analysis() {
+echo "=== LOGS ANALYSIS ==="
+echo ""
 
 # Function to calculate average
 calc_avg() {
@@ -792,3 +816,9 @@ for host_dir in "$BASE_DIR"/themisClient*; do
     fi
 done
 echo "---------------------------------------------------------------------------------"
+}
+
+# Run and save to file
+run_analysis | tee "$OUTPUT_FILE"
+echo ""
+echo "Analysis saved to: $OUTPUT_FILE"

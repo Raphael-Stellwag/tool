@@ -10,10 +10,10 @@ experiments:
       socket_send_buffer: "1 MiB"
       socket_recv_buffer: "1 MiB"
     network:
-      replicaBandwidthUp: 1 Gibits
-      replicaBandwidthDown: 1 Gibits
-      clientBandwidthUp: 1000 Gibits
-      clientBandwidthDown: 1000 Gibits
+      replicaBandwidthUp: 1 Gbits
+      replicaBandwidthDown: 1 Gbits
+      clientBandwidthUp: 1000 Gbits
+      clientBandwidthDown: 1000 Gbits
       latency:
         uniform: true
         replicas: 1000 us
@@ -61,10 +61,10 @@ experiments:
       socket_send_buffer: "1 MiB"
       socket_recv_buffer: "1 MiB"
     network:
-      replicaBandwidthUp: 1 Gibits
-      replicaBandwidthDown: 1 Gibits
-      clientBandwidthUp: 1000 Gibits
-      clientBandwidthDown: 1000 Gibits
+      replicaBandwidthUp: 1 Gbits
+      replicaBandwidthDown: 1 Gbits
+      clientBandwidthUp: 1000 Gbits
+      clientBandwidthDown: 1000 Gbits
       latency:
         uniform: true
         replicas: 1000 us
@@ -112,10 +112,10 @@ experiments:
       socket_send_buffer: "1 MiB"
       socket_recv_buffer: "1 MiB"
     network:
-      replicaBandwidthUp: 1 Gibits
-      replicaBandwidthDown: 1 Gibits
-      clientBandwidthUp: 1000 Gibits
-      clientBandwidthDown: 1000 Gibits
+      replicaBandwidthUp: 1 Gbits
+      replicaBandwidthDown: 1 Gbits
+      clientBandwidthUp: 1000 Gbits
+      clientBandwidthDown: 1000 Gbits
       latency:
         uniform: true
         replicas: 1000 us
@@ -163,10 +163,10 @@ experiments:
       socket_send_buffer: "1 MiB"
       socket_recv_buffer: "1 MiB"
     network:
-      replicaBandwidthUp: 1 Gibits
-      replicaBandwidthDown: 1 Gibits
-      clientBandwidthUp: 1000 Gibits
-      clientBandwidthDown: 1000 Gibits
+      replicaBandwidthUp: 1 Gbits
+      replicaBandwidthDown: 1 Gbits
+      clientBandwidthUp: 1000 Gbits
+      clientBandwidthDown: 1000 Gbits
       latency:
         uniform: true
         replicas: 1000 us
@@ -214,10 +214,10 @@ experiments:
       socket_send_buffer: "1 MiB"
       socket_recv_buffer: "1 MiB"
     network:
-      replicaBandwidthUp: 1 Gibits
-      replicaBandwidthDown: 1 Gibits
-      clientBandwidthUp: 1000 Gibits
-      clientBandwidthDown: 1000 Gibits
+      replicaBandwidthUp: 1 Gbits
+      replicaBandwidthDown: 1 Gbits
+      clientBandwidthUp: 1000 Gbits
+      clientBandwidthDown: 1000 Gbits
       latency:
         uniform: true
         replicas: 1000 us
@@ -265,10 +265,10 @@ experiments:
       socket_send_buffer: "1 MiB"
       socket_recv_buffer: "1 MiB"
     network:
-      replicaBandwidthUp: 1 Gibits
-      replicaBandwidthDown: 1 Gibits
-      clientBandwidthUp: 1000 Gibits
-      clientBandwidthDown: 1000 Gibits
+      replicaBandwidthUp: 1 Gbits
+      replicaBandwidthDown: 1 Gbits
+      clientBandwidthUp: 1000 Gbits
+      clientBandwidthDown: 1000 Gbits
       latency:
         uniform: true
         replicas: 1000 us
@@ -316,10 +316,10 @@ experiments:
       socket_send_buffer: "1 MiB"
       socket_recv_buffer: "1 MiB"
     network:
-      replicaBandwidthUp: 10 Gibits
-      replicaBandwidthDown: 10 Gibits
-      clientBandwidthUp: 1000 Gibits
-      clientBandwidthDown: 1000 Gibits
+      replicaBandwidthUp: 10 Gbits
+      replicaBandwidthDown: 10 Gbits
+      clientBandwidthUp: 1000 Gbits
+      clientBandwidthDown: 1000 Gbits
       latency:
         uniform: true
         replicas: 1000 us
@@ -367,10 +367,10 @@ experiments:
       socket_send_buffer: "1 MiB"
       socket_recv_buffer: "1 MiB"
     network:
-      replicaBandwidthUp: 10 Gibits
-      replicaBandwidthDown: 10 Gibits
-      clientBandwidthUp: 1000 Gibits
-      clientBandwidthDown: 1000 Gibits
+      replicaBandwidthUp: 10 Gbits
+      replicaBandwidthDown: 10 Gbits
+      clientBandwidthUp: 1000 Gbits
+      clientBandwidthDown: 1000 Gbits
       latency:
         uniform: true
         replicas: 1000 us
@@ -418,10 +418,10 @@ experiments:
       socket_send_buffer: "1 MiB"
       socket_recv_buffer: "1 MiB"
     network:
-      replicaBandwidthUp: 10 Gibits
-      replicaBandwidthDown: 10 Gibits
-      clientBandwidthUp: 1000 Gibits
-      clientBandwidthDown: 1000 Gibits
+      replicaBandwidthUp: 10 Gbits
+      replicaBandwidthDown: 10 Gbits
+      clientBandwidthUp: 1000 Gbits
+      clientBandwidthDown: 1000 Gbits
       latency:
         uniform: true
         replicas: 1000 us
@@ -469,10 +469,10 @@ experiments:
       socket_send_buffer: "1 MiB"
       socket_recv_buffer: "1 MiB"
     network:
-      replicaBandwidthUp: 10 Gibits
-      replicaBandwidthDown: 10 Gibits
-      clientBandwidthUp: 1000 Gibits
-      clientBandwidthDown: 1000 Gibits
+      replicaBandwidthUp: 10 Gbits
+      replicaBandwidthDown: 10 Gbits
+      clientBandwidthUp: 1000 Gbits
+      clientBandwidthDown: 1000 Gbits
       latency:
         uniform: true
         replicas: 1000 us

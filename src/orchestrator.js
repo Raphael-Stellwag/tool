@@ -199,6 +199,11 @@ async function main() {
           path.join(experimentId, process.env.SHADOW_FILE),
         ),
       )
+
+      // Run protocol-specific post-run hook (e.g., analysis)
+      if (protocol.postRun) {
+        await protocol.postRun(experimentId, logger)
+      }
     } catch (err) {
       logger.error(
         `An error occurred while processing experiment ${experimentId}, error message: ${err.message}`,
