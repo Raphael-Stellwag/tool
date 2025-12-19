@@ -96,7 +96,7 @@ function resolveRustLogLevels(replicaSettings, clientSettings) {
 
 async function build(replicaSettings, clientSettings, log) {
   log.info('building Themis ...')
-  let cmd = { proc: 'cargo', args: ['build', '--bins'] }
+  let cmd = { proc: 'cargo', args: ['build', '--bins', '--release'] }
   await promisified_spawn(cmd.proc, cmd.args, process.env.THEMIS_LEGO_BFT_DIR, log)
   log.info('Themis build terminated sucessfully!')
 }
