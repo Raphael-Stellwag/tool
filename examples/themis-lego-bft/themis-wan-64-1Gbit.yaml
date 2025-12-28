@@ -1,14 +1,14 @@
 protocolName: themis-lego-bft
 protocolConnectorPath: ./connectors/themis-lego-bft.js
 experiments:
-  - name: AWS_64rep_analyse_socket_1_MiB
+  - name: AWS_64rep_analyse_socket_32_MiB
     misc:
       runahead: 900 us
       duration: 40 s
       parallelism: 32
       useShortestPath: false
-      socket_send_buffer: "1 MiB"
-      socket_recv_buffer: "1 MiB"
+      socket_send_buffer: "32 MiB"
+      socket_recv_buffer: "32 MiB"
     network:
       replicaBandwidthUp: 1 Gbit 
       replicaBandwidthDown: 1 Gbit
@@ -17,9 +17,9 @@ experiments:
       latency:
        uniform: false
        replicas: [ 'eu-west-1':      4,
-                   'eu-west-2':      4,
-                   'eu-north-1':     4,
-                   'ap-south-1':     4,
+                   'eu-west-2':      3,
+                   'eu-north-1':     3,
+                   'ap-south-1':     3,
                    'eu-west-3':      3,
                    'eu-south-1':     3,
                    'eu-central-1':   3,
@@ -78,6 +78,77 @@ experiments:
       duration: 40 s
       parallelism: 32
       useShortestPath: false
+      socket_send_buffer: "1 MiB"
+      socket_recv_buffer: "1 MiB"
+    network:
+      replicaBandwidthUp: 1 Gbit 
+      replicaBandwidthDown: 1 Gbit
+      clientBandwidthUp: 1000 Gibit
+      clientBandwidthDown: 1000 Gibit
+      latency:
+       uniform: false
+       replicas: [ 'eu-west-1':      4,
+                   'eu-west-2':      3,
+                   'eu-north-1':     3,
+                   'ap-south-1':     3,
+                   'eu-west-3':      3,
+                   'eu-south-1':     3,
+                   'eu-central-1':   3,
+                   'us-east-1':      3,
+                   'us-east-2':      3,
+                   'us-west-1':      3,
+                   'us-west-2':      3,
+                   'af-south-1':     3,
+                   'ap-northeast-3': 3,
+                   'ap-northeast-2': 3,
+                   'me-south-1':     3,
+                   'ap-northeast-1': 3,
+                   'sa-east-1':      3,
+                   'ca-central-1':   3,
+                   'ap-east-1':      3,
+                   'ap-southeast-1': 3,
+                   'ap-southeast-2': 3]
+       clients: ['eu-central-1': 1]
+      packetLoss: 0.0
+    replica:  
+      replicas: 64
+      minBatchSize: 2_000
+      maxBatchSize: 2_000
+      replySize: 256
+      batchReplies: true      
+      bracha_hashed_batching: true
+      bracha_hashed_batch_size: 20
+      bracha_hashed_batch_timeout_ms: 250
+      rust_log: debug
+      requestTimeout: 40000
+      checkpointInterval: 200
+      authentication_clients: "Dummy32B"
+      bracha_authentication_peers: "Dummy32B"
+      pbft_authentication_peers: "Dummy32B"
+      max_parallel_requests_per_client: 10_000
+      enable_response_store: true
+      reliable_sender_cache: false
+      batchTimeout:
+        secs: 3
+        nano: 0
+      batchMinDelay:
+        secs: 0
+        nano: 200_000_000
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-receiver"
+      clients: 64
+      startTime: 2 s
+      payload: 256
+      concurrent: 10_000
+      rust_log: debug
+      duration: 30 # WATCH OUT FOR THIS VALUE (for now)
+  - name: AWS_64rep_analyse_socket_200_KiB
+    misc:
+      runahead: 900 us
+      duration: 40 s
+      parallelism: 32
+      useShortestPath: false
       socket_send_buffer: "200 KiB"
       socket_recv_buffer: "200 KiB"
     network:
@@ -88,9 +159,9 @@ experiments:
       latency:
        uniform: false
        replicas: [ 'eu-west-1':      4,
-                   'eu-west-2':      4,
-                   'eu-north-1':     4,
-                   'ap-south-1':     4,
+                   'eu-west-2':      3,
+                   'eu-north-1':     3,
+                   'ap-south-1':     3,
                    'eu-west-3':      3,
                    'eu-south-1':     3,
                    'eu-central-1':   3,
