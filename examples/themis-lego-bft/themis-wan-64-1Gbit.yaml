@@ -63,6 +63,15 @@ experiments:
       batchMinDelay:
         secs: 0
         nano: 2_000_000_000
+    client:
+      numberOfHosts: 1
+      response_strategy: "reply-receiver"
+      clients: 64
+      startTime: 2 s
+      payload: 256
+      concurrent: 10_000
+      rust_log: debug
+      duration: 30 # WATCH OUT FOR THIS VALUE (for now)
   - name: AWS_64rep_analyse_socket_32_MiB
     misc:
       runahead: 5 ms
